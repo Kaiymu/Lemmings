@@ -27,11 +27,18 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	
 	private void Update() {
 		GetMousePressed();
+		CheckIfLemmingIsSelected();
+	}
+	
+	private void GetMousePressed() {
+		_leftMouseButton = _inputManager.LeftMouseButton();
+	}
 
+	private void CheckIfLemmingIsSelected() {
 		if(_leftMouseButton == true && _canSaveLemming == true) {
 			_canSaveLemming = false;
 			_selectedLemming = _inputManager.GetGameObjectClicked();
-
+			
 			if(_selectedLemming != null && _selectedLemming.tag == "Lemming") {
 				SaveClickedLemming();
 			}
@@ -39,15 +46,14 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 			_canSaveLemming = true;
 		}
 	}
-	
-	private void GetMousePressed() {
-		_leftMouseButton = _inputManager.LeftMouseButton();
-	}
 
 	private void SaveClickedLemming() {
 		if(lemmings.Contains(_selectedLemming)) {
+			canCombineLemmings = false;
 			lemmings.Remove(_selectedLemming);
 			_selectedLemming.GetComponent<Renderer>().material.color = Color.grey;
+		} else if(lemmings.Count > 1) {
+			Debug.Log("Two lemmings already selected");
 		} else {
 			if(lemmings.Count == 1) {
 				canCombineLemmings = true;
@@ -55,6 +61,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 
 				_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
 			} else {
+				canCombineLemmings = false;
 				lemmings.Add(_selectedLemming);
 				
 				_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
