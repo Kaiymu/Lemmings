@@ -19,6 +19,7 @@ public class MovingState : FSMState<Lemmings> {
 	// Appelée comme un update
 	public override void Execute(Lemmings o, FSM<Lemmings> fsm)
 	{
+        o.m_rigidbody2D.velocity = new Vector2(o.moveSpeed, o.m_rigidbody2D.velocity.y);
 	}
 
 	// Utilosée pour effectuer la transition chaque seconde, appelée comme un update
