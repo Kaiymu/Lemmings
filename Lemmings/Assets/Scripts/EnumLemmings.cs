@@ -3,6 +3,11 @@ using System.Collections;
 
 public enum EnumLemmings {
     NONE, 
-    LEMMINGS,
-    LEMMINGS_JUMP
+	NEUTRAL,
+	BOUNCE,
+	GRAVITY,
+	STONE,
+	PLATFORM,
+	LOVE,
+	POISON
 }

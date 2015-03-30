@@ -2,15 +2,12 @@
 using System.Collections;
 
 public class CollisionLemmingsJump : CollisionManager {
+	
+	public float jumpSpeed;
+	protected override void EnterLAllCollision(GameObject lemmings) {
+		Lemmings _lemmings = lemmings.GetComponent<Lemmings>();
 
-    protected override void LemmingsCollision(GameObject lemmings)
-    {
-
-    }
-
-    protected override void LemmingsJumpCollision(GameObject lemmings)
-    {
-        float move = lemmings.GetComponent<Lemmings>().moveSpeed;
-        lemmings.GetComponent<Lemmings>().moveSpeed = -move;
+		_lemmings.jumpSpeed = jumpSpeed;
+		_lemmings.fsm.ChangeState(BounceState.Instance);
     }
 }

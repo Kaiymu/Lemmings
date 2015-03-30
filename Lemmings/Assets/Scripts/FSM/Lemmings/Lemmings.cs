@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Lemmings : MonoBehaviour {
 
-    public float moveSpeed = 5;
+	[Range(0.1f, 10f)]
+    public float moveSpeed = 5f;
+	[Range(0.1f, 10f)]
+	public float jumpSpeed = 5f;
    
 	[HideInInspector]
 	public Renderer rendererLemmings;
@@ -11,7 +15,7 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public Rigidbody2D m_rigidbody2D;
 
-	private FSM<Lemmings> fsm;
+	public FSM<Lemmings> fsm;
 
     public EnumLemmings enumLemmings;
 
