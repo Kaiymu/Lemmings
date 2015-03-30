@@ -43,6 +43,7 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 	private void CombineLemmings() {
 		GameObject newLemming = Instantiate(Resources.Load("Lemming") as GameObject);
 		newLemming.transform.position = _lemmingManager.lemmings[0].transform.position;
+		newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
 
 		foreach(GameObject _lemming in _lemmingManager.lemmings) {
 			Destroy(_lemming);
