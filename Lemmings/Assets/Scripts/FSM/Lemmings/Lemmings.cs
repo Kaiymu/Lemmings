@@ -14,7 +14,7 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public Transform mine;
 	[HideInInspector]
-	public Renderer renderer;
+	public Renderer rendererLemmings;
 
 	private FSM<Lemmings> fsm;
 
@@ -22,13 +22,13 @@ public class Lemmings : MonoBehaviour {
     {
         home = GameObject.FindGameObjectWithTag("Home").transform;
         mine = GameObject.FindGameObjectWithTag("Mine").transform   ;
-		renderer = GetComponent<Renderer>();
+        rendererLemmings = GetComponent<Renderer>();
     }
 
     private void Start()
     {
 		fsm = new FSM<Lemmings>();
         fsm.Configure(this, EmptyState.Instance);
-		renderer.material.color = Color.green;
+        rendererLemmings.material.color = Color.green;
     }
 }

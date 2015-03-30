@@ -22,7 +22,7 @@ public class EmptyState : FSMState<Lemmings> {
         {
             o.bag = 0;
             fsm.ChangeState(EmptyState.Instance);
-            o.renderer.material.color = Color.green;
+            o.rendererLemmings.material.color = Color.green;
         }
     }
 }
