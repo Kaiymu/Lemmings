@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class CauldronManager : SingleBehaviour<CauldronManager> {
 
@@ -12,20 +11,23 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 
 	private GameObject _selectedCauldron;
 
-	private List<GameObject> _lemmings;
-	
 	private void Start() {
 		_inputManager = InputManager.instance;
 		_lemmingManager = LemmingsManager.instance;
-
-		_lemmings = new List<GameObject>();
 
 		_canCombineLemming = false;
 	}
 
 	private void Update() {
 		GetMousePressed();
+		CheckIfClickOnCauldron();
+	}
+	
+	private void GetMousePressed() {
+		_leftMouseButton = _inputManager.LeftMouseButton();
+	}
 
+	private void CheckIfClickOnCauldron() {
 		if(_leftMouseButton == true && _canCombineLemming == true) {
 			_canCombineLemming = false;
 			_selectedCauldron = _inputManager.GetGameObjectClicked();
@@ -37,13 +39,15 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 			_canCombineLemming = true;
 		}
 	}
-	
-	private void GetMousePressed() {
-		_leftMouseButton = _inputManager.LeftMouseButton();
-	}
 
 	private void CombineLemmings() {
-		_lemmings = _lemmingManager.lemmings;
-		Debug.Log("NEW LEMMING");
+		GameObject newLemming = Instantiate(Resources.Load("Lemming") as GameObject);
+		newLemming.transform.position = _lemmingManager.lemmings[0].transform.position;
+
+		foreach(GameObject _lemming in _lemmingManager.lemmings) {
+			Destroy(_lemming);
+		}
+
+		_lemmingManager.lemmings.Clear();
 	}
 }
