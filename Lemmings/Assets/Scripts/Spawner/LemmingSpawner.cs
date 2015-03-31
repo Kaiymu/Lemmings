@@ -1,0 +1,61 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Xml;
+
+public class LemmingSpawner : MonoBehaviour {
+    
+    public TextAsset xmlLDSetup;
+    private GameObject[] lemmingsPrefabs = new GameObject[6];
+    private XmlNodeList lemmings;
+
+    private int i = 0;
+    private float spawnDeltaTime = 0f;
+
+    private void LoadLemmings() { 
+        lemmingsPrefabs[0] = Resources.Load("Prefabs/Lemmings/LemmingsNeutral") as GameObject;
+        lemmingsPrefabs[1] = Resources.Load("Prefabs/Lemmings/LemmingsBounce") as GameObject;
+    }
+    
+    private void Start() {
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(xmlLDSetup.text);
+        lemmings = xmlDoc.GetElementsByTagName("Lemming");
+
+        LoadLemmings();
+    }
+    
+    private void Update() {
+        LemmingsToSpawn();
+    }
+
+    private void LemmingsToSpawn() {
+
+        if(i < lemmings.Count) {
+            XmlNode lemming = lemmings[i];
+
+            float ancienSpawnDeltaTime = spawnDeltaTime;
+            spawnDeltaTime = float.Parse(lemming.Attributes["spawnDeltaTime"].Value);
+
+            if ((spawnDeltaTime + ancienSpawnDeltaTime) < Time.time) {
+                i++;
+                string type = lemming.Attributes["type"].Value.ToString();
+
+                if(RetrieveLemmingsFromType(type) != null)
+                    Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation);
+            }
+        }
+    }
+    
+    private GameObject RetrieveLemmingsFromType(string type)
+    {
+        switch(type)
+        {
+            case "lemmingNeutral" :
+                return lemmingsPrefabs[0];
+            case "lemmingBounce" : 
+                return lemmingsPrefabs[1];
+        }
+        return null;
+    }
+}
