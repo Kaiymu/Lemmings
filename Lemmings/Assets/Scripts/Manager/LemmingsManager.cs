@@ -71,11 +71,13 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	}
     
     public void RetrieveLemmingsClicked() {
-        Debug.Log("toto");
         GameObject gameobjectClicked = _inputManager.GetGameObjectClicked();
-       
-        if(_selectedLemming.tag == "Lemming") {
-            gameobjectClicked.GetComponent<Lemmings>().isClicked = true;
+
+        if(gameobjectClicked != null) {
+
+            if(gameobjectClicked.tag == "Lemming") {
+                gameobjectClicked.GetComponent<Lemmings>().isClicked = true;
+            }
         }
     }
 
