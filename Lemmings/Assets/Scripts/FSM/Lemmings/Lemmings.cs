@@ -18,6 +18,7 @@ public class Lemmings : MonoBehaviour {
 	public FSM<Lemmings> fsm;
 
     public EnumLemmings enumLemmings;
+	public string lemmingColor;
 
     [HideInInspector]
     public Animator animatorLemmings;
