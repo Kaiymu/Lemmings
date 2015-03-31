@@ -27,7 +27,8 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	
 	private void Update() {
 		GetMousePressed();
-		CheckIfLemmingIsSelected();
+        RetrieveLemmingsClicked();
+        CheckIfLemmingIsSelected();
 	}
 	
 	private void GetMousePressed() {
@@ -68,4 +69,21 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 			}
 		}
 	}
+    
+    public void RetrieveLemmingsClicked() {
+        Debug.Log("toto");
+        GameObject gameobjectClicked = _inputManager.GetGameObjectClicked();
+       
+        if(_selectedLemming.tag == "Lemming") {
+            gameobjectClicked.GetComponent<Lemmings>().isClicked = true;
+        }
+    }
+
+    public void RemoveLemmings(GameObject lemmingsToDelete) {
+
+        if(lemmings.Contains(lemmingsToDelete)) {
+            lemmings.Remove(lemmingsToDelete);
+            Destroy(lemmingsToDelete);
+        }
+    }
 }

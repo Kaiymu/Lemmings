@@ -2,7 +2,7 @@
  
 <LemmingsLDSetup>
 	<Lemming type="lemmingNeutral" spawnDeltaTime="0"/>
-	<Lemming type="lemmingNeutral" spawnDeltaTime="0.1"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="2"/>
 	<Lemming type="lemmingBounce" spawnDeltaTime="0.2"/>
 	<Lemming type="lemmingBounce" spawnDeltaTime="0.3"/>
 </LemmingsLDSetup>
