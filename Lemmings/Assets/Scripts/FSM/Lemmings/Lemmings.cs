@@ -1,34 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Lemmings : MonoBehaviour {
 
-    public float bagSize = 10;
-    public float bag = 0;
-    public float miningSpeed = 5;
-    public float moveSpeed = 5;
-    public float emptySpeed = 10;
-
-    [HideInInspector]
-    public Transform home;
-    [HideInInspector]
-    public Transform mine;
+	[Range(0.1f, 10f)]
+    public float moveSpeed = 5f;
+	[Range(0.1f, 10f)]
+	public float jumpSpeed = 5f;
+   
 	[HideInInspector]
 	public Renderer rendererLemmings;
 
-	private FSM<Lemmings> fsm;
+    [HideInInspector]
+    public Rigidbody2D m_rigidbody2D;
+
+	public FSM<Lemmings> fsm;
+
+    public EnumLemmings enumLemmings;
 
     private void Awake()
     {
-        home = GameObject.FindGameObjectWithTag("Home").transform;
-        mine = GameObject.FindGameObjectWithTag("Mine").transform   ;
         rendererLemmings = GetComponent<Renderer>();
+        m_rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
 		fsm = new FSM<Lemmings>();
-        fsm.Configure(this, EmptyState.Instance);
-        rendererLemmings.material.color = Color.green;
+        fsm.Configure(this, MovingState.Instance);
     }
 }

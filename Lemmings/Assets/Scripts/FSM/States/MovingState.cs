@@ -11,19 +11,17 @@ public class MovingState : FSMState<Lemmings> {
 	}
 
 	// Appelée une fois au changement de state
-	public override void Begin (Lemmings o, FSM<Lemmings> fsm)
-	{
+	public override void Begin (Lemmings o, FSM<Lemmings> fsm) {
 
 	}
 
 	// Appelée comme un update
-	public override void Execute(Lemmings o, FSM<Lemmings> fsm)
-	{
+	public override void Execute(Lemmings o, FSM<Lemmings> fsm) {
+        o.m_rigidbody2D.velocity = new Vector2(o.moveSpeed, o.m_rigidbody2D.velocity.y);
 	}
 
 	// Utilosée pour effectuer la transition chaque seconde, appelée comme un update
-	public override void Transition(Lemmings o, FSM<Lemmings> fsm)
-	{
+	public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
 	}
 
 	// Appelée une fois lorsque la state est quitée
