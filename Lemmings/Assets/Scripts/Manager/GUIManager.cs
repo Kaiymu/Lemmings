@@ -1,20 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GUIManager : SingleBehaviour<GUIManager> {
 
-	public Transform numberOfLemmingsText;
+	public Text numberOfLemmings;
 
-	private GUIText _numberOfLemmingsText;
-	private int numberMaxOfLemmings;
-
-	private void Start() {
-		numberMaxOfLemmings = 3;
-		_numberOfLemmingsText = numberOfLemmingsText.GetComponent<GUIText>();
+	public void SetNumberOfLemmings(int number) {
+		numberOfLemmings.text = number.ToString();
 	}
-
-	public void NumberOfLemmings(int number) {
-		_numberOfLemmingsText.text = "Number of Lemmings : " + number.ToString();
-	}
-
 }

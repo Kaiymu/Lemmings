@@ -8,14 +8,19 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 	
 	private InputManager _inputManager;
 	private LemmingsManager _lemmingManager;
+	private GameManager _gameManager;
 
 	private GameObject _selectedCauldron;
 
 	private void Start() {
+		SetManager();
+		_canCombineLemming = false;
+	}
+
+	private void SetManager() {
 		_inputManager = InputManager.instance;
 		_lemmingManager = LemmingsManager.instance;
-
-		_canCombineLemming = false;
+		_gameManager = GameManager.instance;
 	}
 
 	private void Update() {
@@ -42,10 +47,17 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 
 	private void CombineLemmings() {
 		GameObject newLemming = Instantiate(Resources.Load("Lemming") as GameObject);
+		_gameManager.SetNumberOfLemmings(1);
+		_gameManager.allLemmings.Add(newLemming);
+
 		newLemming.transform.position = _lemmingManager.lemmings[0].transform.position;
 		newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
 
 		foreach(GameObject _lemming in _lemmingManager.lemmings) {
+			if(_gameManager.allLemmings.Contains(_lemming)) {
+				_gameManager.allLemmings.Remove(_lemming);
+				_gameManager.SetNumberOfLemmings(-1);
+			}
 			Destroy(_lemming);
 		}
 
