@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class CollisionLemmingsJump : CollisionManager {
+
+    private Animator _animatorTrigger;
+
+    private void Start() {
+        _animatorTrigger = GetComponent<Animator>();
+    }
 	
 	public float jumpSpeed;
 	protected override void EnterLAllCollision(GameObject lemmings) {
@@ -9,5 +15,10 @@ public class CollisionLemmingsJump : CollisionManager {
 
 		_lemmings.jumpSpeed = jumpSpeed;
 		_lemmings.fsm.ChangeState(BounceState.Instance);
+        _animatorTrigger.SetInteger("TriggerAnimation", 1);
+    }
+
+    protected override void ExitLAllCollision(GameObject lemmings) {
+        _animatorTrigger.SetInteger("TriggerAnimation", 0);
     }
 }

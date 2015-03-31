@@ -30,25 +30,31 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public bool isClicked = false;
 
+    [HideInInspector]
+    public GameObject m_Lemming;
+
+    private GameObject[] triggersToSpawn = new GameObject[1];
+
+    private void LoadLemmings() { 
+        triggersToSpawn[0] = Resources.Load("Prefabs/Triggers/BouncerTrigger") as GameObject;
+    }
+
     private void Awake()
     {
         rendererLemmings = GetComponent<Renderer>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         animatorLemmings = GetComponent<Animator>();
+        m_Lemming = gameObject;
     }
 
     private void Start()
     {
 		fsm = new FSM<Lemmings>();
         fsm.Configure(this, MovingState.Instance);
+        LoadLemmings();
     }
 
-    private void Update() {
-        Debug.Log(isClicked);
-    }
-
-    public void Flip()
-    {
+    public void Flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
@@ -70,6 +76,16 @@ public class Lemmings : MonoBehaviour {
     }
 
     public void AnimatorList() {
+        switch(enumLemmings)
+        {
+            case EnumLemmings.NEUTRAL : 
+            break;
+            case EnumLemmings.BOUNCE : 
+                Instantiate(triggersToSpawn[0], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+                LemmingsManager.instance.RemoveLemmings(gameObject);
+            break;
+        }
 
+        isClicked = false;
     }
 }

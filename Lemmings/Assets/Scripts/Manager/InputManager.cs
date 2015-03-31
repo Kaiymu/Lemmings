@@ -35,4 +35,12 @@ public class InputManager : SingleBehaviour<InputManager> {
 		}
 	}
 
+    public GameObject GetOnClickedObject() {
+        if(Input.GetMouseButton(0)) {
+            return GetGameObjectClicked();
+        }
+        return null;
+
+    }
+
 }

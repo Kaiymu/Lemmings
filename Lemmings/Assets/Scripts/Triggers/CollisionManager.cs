@@ -32,6 +32,14 @@ public abstract class CollisionManager : MonoBehaviour {
 				EnterLLoveCollision(collider.gameObject);
         }
     }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Lemming") {
+         
+            ExitLAllCollision(collider.gameObject);
+        };
+    }
 	
 	protected virtual void EnterLAllCollision(GameObject Lemmings){}
 	protected virtual void EnterLNeutralCollision(GameObject Lemmings){}
@@ -40,4 +48,6 @@ public abstract class CollisionManager : MonoBehaviour {
 	protected virtual void EnterLPlatformCollision(GameObject Lemmings){}
 	protected virtual void EnterLPoisonCollision(GameObject Lemmings){}
 	protected virtual void EnterLLoveCollision(GameObject Lemmings){}
+
+    protected virtual void ExitLAllCollision(GameObject Lemmings){}
 }
