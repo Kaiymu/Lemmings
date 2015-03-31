@@ -29,6 +29,5 @@ public class Lemmings : MonoBehaviour {
     {
 		fsm = new FSM<Lemmings>();
         fsm.Configure(this, MovingState.Instance);
-        rendererLemmings.material.color = Color.green;
     }
 }
