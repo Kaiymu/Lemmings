@@ -40,9 +40,13 @@ public class LemmingSpawner : MonoBehaviour {
             if ((spawnDeltaTime + ancienSpawnDeltaTime) < Time.time) {
                 i++;
                 string type = lemming.Attributes["type"].Value.ToString();
+				string color = lemming.Attributes["color"].Value.ToString();
 
-                if(RetrieveLemmingsFromType(type) != null)
-                    Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation);
+				if(RetrieveLemmingsFromType(type) != null) {
+					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
+					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
+					newLemming.GetComponent<Lemmings>().lemmingColor = color;
+				}             
             }
         }
     }
