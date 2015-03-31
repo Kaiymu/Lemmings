@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<LemmingsLDSetup>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="0"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="0.1"/>
+	<Lemming type="lemmingBounce" spawnDeltaTime="0.2"/>
+	<Lemming type="lemmingBounce" spawnDeltaTime="0.3"/>
+</LemmingsLDSetup>
