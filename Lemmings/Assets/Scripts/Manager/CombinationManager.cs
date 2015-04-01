@@ -59,6 +59,7 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
                             
                             newLemming.transform.position = _lemmingsManager.lemmings[0].transform.position;
                             newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
+                            _lemmingsManager.PlayLemmings();
                         }
 					}
 				}
