@@ -53,6 +53,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	private void SaveClickedLemming() {
         PauseLemmings();
 		if(lemmings.Contains(_selectedLemming)) {
+            Debug.Log("toto");
             PlayLemmings();
 			canCombineLemmings = false;
 			lemmings.Remove(_selectedLemming);
