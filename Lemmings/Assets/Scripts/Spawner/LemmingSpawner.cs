@@ -6,7 +6,7 @@ using System.Xml;
 public class LemmingSpawner : MonoBehaviour {
     
     public TextAsset xmlLDSetup;
-    private GameObject[] lemmingsPrefabs = new GameObject[6];
+    private GameObject[] lemmingsPrefabs = new GameObject[7];
     private XmlNodeList lemmings;
 
     private int i = 0;
@@ -15,8 +15,11 @@ public class LemmingSpawner : MonoBehaviour {
     private void LoadLemmings() { 
         lemmingsPrefabs[0] = Resources.Load("Prefabs/Lemmings/LemmingsNeutral") as GameObject;
         lemmingsPrefabs[1] = Resources.Load("Prefabs/Lemmings/LemmingsBounce") as GameObject;
-		lemmingsPrefabs[2] = Resources.Load("Prefabs/Lemmings/LemmingsPoison") as GameObject;
-		lemmingsPrefabs[3] = Resources.Load("Prefabs/Lemmings/LemmingsStone") as GameObject;
+		lemmingsPrefabs[2] = Resources.Load("Prefabs/Lemmings/LemmingsLove") as GameObject;
+		lemmingsPrefabs[3] = Resources.Load("Prefabs/Lemmings/LemmingsPlatform") as GameObject;
+		lemmingsPrefabs[4] = Resources.Load("Prefabs/Lemmings/LemmingsPoison") as GameObject;
+		lemmingsPrefabs[5] = Resources.Load("Prefabs/Lemmings/LemmingsStone") as GameObject;
+		lemmingsPrefabs[6] = Resources.Load("Prefabs/Lemmings/LemmingsGravity") as GameObject;
     }
     
     private void Start() {
@@ -61,10 +64,16 @@ public class LemmingSpawner : MonoBehaviour {
                 return lemmingsPrefabs[0];
             case "lemmingBounce" : 
                 return lemmingsPrefabs[1];
-			case "lemmingPoison" :
+			case "lemmingLove" :
 				return lemmingsPrefabs[2];
-			case "lemmingStone" : 
+			case "lemmingPlatform" : 
 				return lemmingsPrefabs[3];
+			case "lemmingPoison" : 
+				return lemmingsPrefabs[4];
+			case "lemmingStone" : 
+				return lemmingsPrefabs[5];
+			case "lemmingGravity" : 
+				return lemmingsPrefabs[6];
         }
         return null;
     }
