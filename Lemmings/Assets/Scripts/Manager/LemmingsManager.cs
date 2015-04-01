@@ -76,12 +76,14 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	}
 
     private void PauseLemmings() {
+        GameManager.instance.isPaused = true;
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {
             _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
         }
     }
 
     public void PlayLemmings() {
+        GameManager.instance.isPaused = false;
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {            
             _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(MovingState.Instance);
         }
