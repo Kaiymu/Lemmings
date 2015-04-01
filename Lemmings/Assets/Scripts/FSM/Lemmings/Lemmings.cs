@@ -60,7 +60,11 @@ public class Lemmings : MonoBehaviour {
     private void Start()
     {
 		fsm = new FSM<Lemmings>();
-        fsm.Configure(this, MovingState.Instance);
+        if(GameManager.instance.isPaused)
+            fsm.Configure(this, PauseState.Instance);
+        else 
+            fsm.Configure(this, MovingState.Instance);
+
         LoadLemmings();
     }
 

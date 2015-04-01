@@ -8,6 +8,9 @@ public class GameManager : SingleBehaviour<GameManager> {
 	public List<GameObject> allLemmings;
 	public int numberOfLemmings;
 
+    [HideInInspector]
+    public bool isPaused;
+
 	private GUIManager _GUIManager;
 
 	private void Awake() {

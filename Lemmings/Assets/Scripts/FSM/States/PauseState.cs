@@ -16,9 +16,8 @@ public class PauseState : FSMState<Lemmings> {
         o.animatorLemmings.enabled = false;
     }
 
-	public override void Execute(Lemmings o, FSM<Lemmings> fsm)
-    {
-        Debug.Log("toto");
+	public override void Execute(Lemmings o, FSM<Lemmings> fsm) {
+
     }
 
 	public override void Transition(Lemmings o, FSM<Lemmings> fsm)
