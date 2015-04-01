@@ -15,6 +15,8 @@ public class LemmingSpawner : MonoBehaviour {
     private void LoadLemmings() { 
         lemmingsPrefabs[0] = Resources.Load("Prefabs/Lemmings/LemmingsNeutral") as GameObject;
         lemmingsPrefabs[1] = Resources.Load("Prefabs/Lemmings/LemmingsBounce") as GameObject;
+		lemmingsPrefabs[2] = Resources.Load("Prefabs/Lemmings/LemmingsPoison") as GameObject;
+		lemmingsPrefabs[3] = Resources.Load("Prefabs/Lemmings/LemmingsStone") as GameObject;
     }
     
     private void Start() {
@@ -53,12 +55,17 @@ public class LemmingSpawner : MonoBehaviour {
     
     private GameObject RetrieveLemmingsFromType(string type)
     {
+		Debug.Log (type);
         switch(type)
         {
             case "lemmingNeutral" :
                 return lemmingsPrefabs[0];
             case "lemmingBounce" : 
                 return lemmingsPrefabs[1];
+			case "lemmingPoison" :
+				return lemmingsPrefabs[2];
+			case "lemmingStone" : 
+				return lemmingsPrefabs[3];
         }
         return null;
     }

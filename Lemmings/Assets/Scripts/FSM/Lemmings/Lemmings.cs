@@ -33,10 +33,12 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public GameObject m_Lemming;
 
-    private GameObject[] triggersToSpawn = new GameObject[1];
+    private GameObject[] triggersToSpawn = new GameObject[3];
 
     private void LoadLemmings() { 
-        triggersToSpawn[0] = Resources.Load("Prefabs/Triggers/BouncerTrigger") as GameObject;
+		triggersToSpawn[0] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerBouncer") as GameObject;
+		triggersToSpawn[1] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerStone") as GameObject;
+		triggersToSpawn[2] = Resources.Load("Prefabs/Triggers/OnMap/LemmingsTriggerPoisoned") as GameObject;
     }
 
     private void Awake()
@@ -78,14 +80,20 @@ public class Lemmings : MonoBehaviour {
     public void AnimatorList() {
         switch(enumLemmings)
         {
-            case EnumLemmings.NEUTRAL : 
-            break;
             case EnumLemmings.BOUNCE : 
                 Instantiate(triggersToSpawn[0], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
                 LemmingsManager.instance.RemoveLemmings(gameObject);
             break;
-        }
-
-        isClicked = false;
+			case EnumLemmings.STONE : 
+				Instantiate(triggersToSpawn[1], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+				LemmingsManager.instance.RemoveLemmings(gameObject);
+			break;
+			case EnumLemmings.POISON : 
+				Instantiate(triggersToSpawn[2], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+				LemmingsManager.instance.RemoveLemmings(gameObject);
+			break;
+		}
+		
+		isClicked = false;
     }
 }

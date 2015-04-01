@@ -2,8 +2,7 @@
  
 <LemmingsLDSetup>
 	<Lemming type="lemmingNeutral" spawnDeltaTime="0" color="BLUE"/>
-	<Lemming type="lemmingNeutral" spawnDeltaTime="0.1" color="YELLOW"/>
 	<Lemming type="lemmingBounce" spawnDeltaTime="1" color="YELLOW"/>
-	<Lemming type="lemmingBounce" spawnDeltaTime="2" color="YELLOW"/>
-	<Lemming type="lemmingBounce" spawnDeltaTime="0.1" color="YELLOW"/>
+	<Lemming type="lemmingPoison" spawnDeltaTime="2" color="YELLOW"/>
+	<Lemming type="lemmingStone" spawnDeltaTime="3" color="YELLOW"/>
 </LemmingsLDSetup>

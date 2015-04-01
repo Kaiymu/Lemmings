@@ -4,6 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(BoxCollider2D))]
 public abstract class CollisionManager : MonoBehaviour {
 
+	protected Animator _animatorTrigger;
+
 	void OnTriggerEnter2D(Collider2D collider)
     {
          if(collider.gameObject.tag == "Lemming") {
@@ -25,12 +27,14 @@ public abstract class CollisionManager : MonoBehaviour {
 			if(collider.gameObject.GetComponent<Lemmings>().enumLemmings == EnumLemmings.PLATFORM)
 				EnterLPlatformCollision(collider.gameObject);
 
-			if(collider.gameObject.GetComponent<Lemmings>().enumLemmings == EnumLemmings.POISON)
-				EnterLPoisonCollision(collider.gameObject);
-
 			if(collider.gameObject.GetComponent<Lemmings>().enumLemmings == EnumLemmings.LOVE)
 				EnterLLoveCollision(collider.gameObject);
         }
+
+		if(collider.gameObject.tag == "LemmingsTriggers") {
+			if(collider.gameObject.GetComponent<LemmingsTriggers>().lemmingsTransformedType == EnumLemmingsTransformed.POISON)
+				EnterLPoisonCollision(collider.gameObject);
+		}
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -40,7 +44,7 @@ public abstract class CollisionManager : MonoBehaviour {
             ExitLAllCollision(collider.gameObject);
         };
     }
-	
+
 	protected virtual void EnterLAllCollision(GameObject Lemmings){}
 	protected virtual void EnterLNeutralCollision(GameObject Lemmings){}
 	protected virtual void EnterLGravityCollision(GameObject Lemmings){}
@@ -50,4 +54,8 @@ public abstract class CollisionManager : MonoBehaviour {
 	protected virtual void EnterLLoveCollision(GameObject Lemmings){}
 
     protected virtual void ExitLAllCollision(GameObject Lemmings){}
+	
+	protected virtual void EndAnimation(int animation) {
+		_animatorTrigger.SetInteger("TriggerAnimation", animation);
+	}
 }
