@@ -15,6 +15,10 @@ public class GameManager : SingleBehaviour<GameManager> {
 		GetAllLemmings();
 	}
 
+    private void IsVisible() {
+
+    }
+
 	private void SetManager() {
 		_GUIManager = GUIManager.instance;
 	}

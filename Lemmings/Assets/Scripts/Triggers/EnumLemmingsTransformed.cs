@@ -5,5 +5,6 @@ public enum EnumLemmingsTransformed  {
 	NONE, 
 	STONE,
 	GRAVITY,
+    CREATE_PLATFORM,
 	POISON
 }

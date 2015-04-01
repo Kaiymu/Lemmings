@@ -11,7 +11,7 @@ public class BloppingSurvivors : CollisionManager {
 
         survivorsLemmings++;
 
-        LemmingsManager.instance.RemoveLemmings(Lemmings);
+        LemmingsManager.instance.RemoveLemming(Lemmings);
 
         if(LemmingsManager.instance.lemmings.Count == survivorsLemmings) {
             Application.LoadLevel(levelToLoad);

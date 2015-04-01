@@ -9,6 +9,7 @@ public class CollisionLemmingsJump : CollisionManager {
 	
 	public float jumpHeight;
     public float jumpSpeed;
+
 	protected override void EnterLAllCollision(GameObject lemmings) {
 		Lemmings _lemmings = lemmings.GetComponent<Lemmings>();
 
