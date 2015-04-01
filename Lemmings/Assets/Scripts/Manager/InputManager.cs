@@ -12,6 +12,14 @@ public class InputManager : SingleBehaviour<InputManager> {
 		}
 	}
 
+	public bool LeftMouseButtonDown() {
+		if(Input.GetMouseButtonDown(0)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public bool RightMouseButton() {
 		if(Input.GetMouseButton(1)) {
 			return true;
@@ -34,5 +42,13 @@ public class InputManager : SingleBehaviour<InputManager> {
 			return null;
 		}
 	}
+
+    public GameObject GetOnClickedObject() {
+        if(Input.GetMouseButton(0)) {
+            return GetGameObjectClicked();
+        }
+        return null;
+
+    }
 
 }

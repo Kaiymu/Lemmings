@@ -12,8 +12,9 @@ public class LemmingsBouncer : FSMState<Lemmings> {
     
     // Appelée une fois au changement de state
     public override void Begin (Lemmings o, FSM<Lemmings> fsm) {
-        o.m_rigidbody2D.velocity = new Vector2(o.moveSpeed, o.jumpSpeed);
-        fsm.ChangeState(MovingState.Instance);
+        if(o.m_Lemming.GetComponent<CollisionLemmingsJump>() == null) {
+
+        }
     }
     
     // Appelée comme un update
@@ -22,6 +23,7 @@ public class LemmingsBouncer : FSMState<Lemmings> {
     
     // Utilosée pour effectuer la transition chaque seconde, appelée comme un update
     public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
+
     }
     
     // Appelée une fois lorsque la state est quitée

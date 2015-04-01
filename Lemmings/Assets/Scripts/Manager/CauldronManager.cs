@@ -27,7 +27,7 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 
 	private void Update() {
 		GetMousePressed();
-		CheckIfClickOnCauldron();
+		//CheckIfClickOnCauldron();
 	}
 	
 	private void GetMousePressed() {
