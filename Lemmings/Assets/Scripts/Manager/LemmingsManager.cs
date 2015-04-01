@@ -11,6 +11,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	public bool canCombineLemmings;
 
 	private InputManager _inputManager;
+    private GameManager _gameManager;
 
 	public List<GameObject> lemmings;
 
@@ -18,6 +19,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 
 	private void Start() {
 		_inputManager = InputManager.instance;
+        _gameManager = GameManager.instance;
 
 		lemmings = new List<GameObject>();
 
@@ -69,7 +71,19 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 			}
 		}
 	}
-    
+
+    private void PauseLemmings() {
+        //for parcourir lemmings
+        //getcomponent Lemmings .fsm.changestate(pausestate.instance)
+        // --- (walkingstate.instance)
+
+        for(int i = 0; i < _gameManager.allLemmings.Count; i++) {
+            GameObject _lemming = _gameManager.allLemmings[i];
+
+            //_lemming.GetComponent<Lemmings>().fsm.ChangeState(state
+        }
+    }
+
     public void RetrieveLemmingsClicked() {
         GameObject gameobjectClicked = _inputManager.GetOnClickedObject();
 	
