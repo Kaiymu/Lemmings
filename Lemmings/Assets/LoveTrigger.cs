@@ -11,7 +11,8 @@ public class LoveTrigger : CollisionManager {
     }
 
     // J'instancie les coeurs, et j'enlève la capacités sur tous, et je détruit le lemmings.
-    private void FeatureLove() {
-
+    protected override void DeathAnimation() {
+        Instantiate(hearthAnimation, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

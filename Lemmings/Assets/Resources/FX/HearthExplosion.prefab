@@ -1,59 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &128758
+--- !u!1 &143392
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 414512}
-  - 212: {fileID: 21252240}
-  - 61: {fileID: 6164724}
-  - 95: {fileID: 9556448}
-  - 114: {fileID: 11485642}
+  - 4: {fileID: 478390}
+  - 212: {fileID: 21278234}
+  - 95: {fileID: 9583106}
   m_Layer: 0
-  m_Name: LemmingsTriggerLove
-  m_TagString: LemmingsTriggers
+  m_Name: HearthExplosion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &414512
+--- !u!4 &478390
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
+  m_GameObject: {fileID: 143392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.23899984, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6164724
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: -.119999997}
-  serializedVersion: 2
-  m_Size: {x: 11.4399996, y: .610000014}
---- !u!95 &9556448
+--- !u!95 &9583106
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
+  m_GameObject: {fileID: 143392}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7e45b9443c9eda645a5baad43319d93d, type: 2}
+  m_Controller: {fileID: 9100000, guid: d3cb84094630fdd4aa5db605b9503ab4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -61,24 +46,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11485642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0071c0429a87584da1e4414a5b63f42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hearthAnimation: {fileID: 143392, guid: 1f3e087b71f44164eac0ae446296ac18, type: 2}
---- !u!212 &21252240
+--- !u!212 &21278234
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
+  m_GameObject: {fileID: 143392}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -97,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d36da056930a14b4dbecf3bff0848d03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3b62ef96c4f8df469305ec865b6dc00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -108,5 +81,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 128758}
+  m_RootGameObject: {fileID: 143392}
   m_IsPrefabParent: 1
