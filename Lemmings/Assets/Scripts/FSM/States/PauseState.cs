@@ -12,16 +12,17 @@ public class PauseState : FSMState<Lemmings> {
 
     public override void Begin(Lemmings o, FSM<Lemmings> fsm)
     {
-        o.animatorLemmings.SetInteger("Lemmings", 0);
+        //o.animatorLemmings.SetInteger("Lemmings", 0);
+        o.animatorLemmings.enabled = false;
     }
 
 	public override void Execute(Lemmings o, FSM<Lemmings> fsm)
     {
-
+        Debug.Log("toto");
     }
 
 	public override void Transition(Lemmings o, FSM<Lemmings> fsm)
     {
-
+        o.animatorLemmings.enabled = true;
     }
 }

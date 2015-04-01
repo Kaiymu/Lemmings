@@ -54,7 +54,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101882}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 31bdb277bc791c445b4a9d81cdf21476, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -.0299999993, y: .0299999993}
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   jumpSpeed: 3
+  jumpHeight: 5
   rendererLemmings: {fileID: 0}
   m_rigidbody2D: {fileID: 0}
   enumLemmings: 7
