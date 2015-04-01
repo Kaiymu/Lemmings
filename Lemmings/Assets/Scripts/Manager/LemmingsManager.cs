@@ -51,13 +51,16 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	}
 
 	private void SaveClickedLemming() {
+        PauseLemmings();
 		if(lemmings.Contains(_selectedLemming)) {
+            PlayLemmings();
 			canCombineLemmings = false;
 			lemmings.Remove(_selectedLemming);
 			_selectedLemming.GetComponent<Renderer>().material.color = Color.grey;
 		} else if(lemmings.Count > 1) {
 			Debug.Log("Two lemmings already selected");
 		} else {
+            PauseLemmings();
 			if(lemmings.Count == 1) {
 				canCombineLemmings = true;
 				lemmings.Add(_selectedLemming);
@@ -78,9 +81,13 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
         // --- (walkingstate.instance)
 
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {
-            GameObject _lemming = _gameManager.allLemmings[i];
+            _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+        }
+    }
 
-            //_lemming.GetComponent<Lemmings>().fsm.ChangeState(state
+    private void PlayLemmings() {
+        for(int i = 0; i < _gameManager.allLemmings.Count; i++) {            
+            _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(MovingState.Instance);
         }
     }
 
@@ -96,7 +103,12 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 		}
     }
 
-    public void RemoveLemmings(GameObject lemmingsToDelete) {
-    	Destroy(lemmingsToDelete, 0.1f);
+    public void RemoveLemming(GameObject lemmingToDelete) {
+        if(_gameManager.allLemmings.Contains(lemmingToDelete)) {
+            _gameManager.allLemmings.Remove(lemmingToDelete);
+            _gameManager.SetNumberOfLemmings(-1);
+
+            Destroy(lemmingToDelete);
+        }
     }
 }
