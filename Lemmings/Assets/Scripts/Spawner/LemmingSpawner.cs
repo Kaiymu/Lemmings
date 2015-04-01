@@ -51,6 +51,8 @@ public class LemmingSpawner : MonoBehaviour {
 					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
 					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
 					newLemming.GetComponent<Lemmings>().lemmingColor = color;
+                    GameManager.instance.allLemmings.Add(newLemming);
+
 				}             
             }
         }
