@@ -27,7 +27,8 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	
 	private void Update() {
 		GetMousePressed();
-		CheckIfLemmingIsSelected();
+        CheckIfLemmingIsSelected();
+        RetrieveLemmingsClicked();
 	}
 	
 	private void GetMousePressed() {
@@ -68,4 +69,20 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 			}
 		}
 	}
+    
+    public void RetrieveLemmingsClicked() {
+        GameObject gameobjectClicked = _inputManager.GetOnClickedObject();
+	
+		if(InputManager.instance.LeftMouseButtonDown()) {
+	        if(gameobjectClicked != null) {
+	            if(gameobjectClicked.tag == "Lemming") {
+	                gameobjectClicked.GetComponent<Lemmings>().AnimatorList();
+	            }
+	        }
+		}
+    }
+
+    public void RemoveLemmings(GameObject lemmingsToDelete) {
+    	Destroy(lemmingsToDelete, 0.1f);
+    }
 }

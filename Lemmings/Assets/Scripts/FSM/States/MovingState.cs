@@ -12,7 +12,7 @@ public class MovingState : FSMState<Lemmings> {
 
 	// Appelée une fois au changement de state
 	public override void Begin (Lemmings o, FSM<Lemmings> fsm) {
-
+        o.animatorLemmings.SetInteger("Lemmings", 1);
 	}
 
 	// Appelée comme un update
@@ -22,10 +22,13 @@ public class MovingState : FSMState<Lemmings> {
 
 	// Utilosée pour effectuer la transition chaque seconde, appelée comme un update
 	public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
+        if(o.IsFalling())
+            fsm.ChangeState(DeadFallState.Instance);
 	}
 
 	// Appelée une fois lorsque la state est quitée
 	public override void End(Lemmings o, FSM<Lemmings> fsm) {
 
 	}
+
 }
