@@ -21,17 +21,7 @@ public class GameManager : SingleBehaviour<GameManager> {
 
 	private void GetAllLemmings() {
 		allLemmings = new List<GameObject>();
-		
-		GameObject[] gos = GameObject.FindGameObjectsWithTag("Lemming");
-		
-		foreach(GameObject lemming in gos) {
-			allLemmings.Add(lemming);
-		}
-		
-		numberOfLemmings = allLemmings.Count;
-
-		_GUIManager.SetNumberOfLemmings(numberOfLemmings);
-	}
+    }
 
 	public void SetNumberOfLemmings(int number) {
 		numberOfLemmings += number;

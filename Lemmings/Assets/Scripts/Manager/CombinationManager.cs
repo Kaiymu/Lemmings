@@ -56,14 +56,9 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
                         if(RetrieveLemmingsFromType(combinations[i].newLemming.ToString()) != null) {
                             GameObject newLemming = Instantiate(RetrieveLemmingsFromType(combinations[i].newLemming.ToString())) as GameObject;
                             newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
-
-                            _gameManager.SetNumberOfLemmings(1);
-                            _gameManager.allLemmings.Add(newLemming);
                             
                             newLemming.transform.position = _lemmingsManager.lemmings[0].transform.position;
                             newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
-
-                            Debug.Log(newLemming);
                         }
 					}
 				}
