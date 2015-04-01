@@ -8,6 +8,8 @@ public class Lemmings : MonoBehaviour {
     public float moveSpeed = 5f;
 	[Range(0.1f, 10f)]
 	public float jumpSpeed = 5f;
+    [Range(0.1f, 10f)]
+    public float jumpHeight = 5f;
    
 	[HideInInspector]
 	public Renderer rendererLemmings;
