@@ -5,6 +5,7 @@ public class PauseState : FSMState<Lemmings> {
 
     private static readonly PauseState instance = new PauseState();
 
+    private float speedAnimation;
     public static PauseState Instance
     {
         get { return instance; }
@@ -13,16 +14,16 @@ public class PauseState : FSMState<Lemmings> {
     public override void Begin(Lemmings o, FSM<Lemmings> fsm)
     {
         //o.animatorLemmings.SetInteger("Lemmings", 0);
-        o.animatorLemmings.enabled = false;
+        speedAnimation = o.animatorLemmings.speed;
+        o.animatorLemmings.speed = 0f;
     }
 
-	public override void Execute(Lemmings o, FSM<Lemmings> fsm)
-    {
-        Debug.Log("toto");
+	public override void Execute(Lemmings o, FSM<Lemmings> fsm) {
+
     }
 
 	public override void Transition(Lemmings o, FSM<Lemmings> fsm)
     {
-        o.animatorLemmings.enabled = true;
+        o.animatorLemmings.speed = speedAnimation;
     }
 }
