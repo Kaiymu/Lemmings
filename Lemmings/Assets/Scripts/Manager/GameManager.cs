@@ -19,7 +19,9 @@ public class GameManager : SingleBehaviour<GameManager> {
 	}
 
     private void IsVisible() {
-
+        for(int i = 0; i < allLemmings.Count; i++) {
+           // allLemmings[i].transform.is
+        }
     }
 
 	private void SetManager() {

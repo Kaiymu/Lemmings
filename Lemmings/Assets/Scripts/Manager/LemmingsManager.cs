@@ -42,7 +42,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 			_canSaveLemming = false;
 			_selectedLemming = _inputManager.GetGameObjectClicked();
 			
-			if(_selectedLemming != null && _selectedLemming.tag == "Lemming") {
+            if(_selectedLemming != null && _selectedLemming.tag == "Lemming" && _selectedLemming.GetComponent<Lemmings>().enumLemmings.ToString() == "NEUTRAL") {
 				SaveClickedLemming();
 			}
 		} if(_leftMouseButton == false && _canSaveLemming == false) {
@@ -53,7 +53,6 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	private void SaveClickedLemming() {
         PauseLemmings();
 		if(lemmings.Contains(_selectedLemming)) {
-            Debug.Log("toto");
             PlayLemmings();
 			canCombineLemmings = false;
 			lemmings.Remove(_selectedLemming);
@@ -82,7 +81,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
         }
     }
 
-    private void PlayLemmings() {
+    public void PlayLemmings() {
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {            
             _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(MovingState.Instance);
         }
