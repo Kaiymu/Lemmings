@@ -35,13 +35,17 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public GameObject m_Lemming;
 
-    private GameObject[] triggersToSpawn = new GameObject[3];
+    private GameObject[] triggersToSpawn = new GameObject[6];
 
     private void LoadLemmings() { 
-		triggersToSpawn[0] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerBouncer") as GameObject;
-		triggersToSpawn[1] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerStone") as GameObject;
+        triggersToSpawn[0] = Resources.Load("Prefabs/Triggers/OnMap/LemmingsCreatePlatform") as GameObject;
+        triggersToSpawn[1] = Resources.Load("Prefabs/Triggers/OnMap/LemmingsTriggerGravity") as GameObject;
 		triggersToSpawn[2] = Resources.Load("Prefabs/Triggers/OnMap/LemmingsTriggerPoisoned") as GameObject;
+        triggersToSpawn[3] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerStone") as GameObject;
+        triggersToSpawn[4] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerBouncer") as GameObject;
+        triggersToSpawn[5] = Resources.Load("Prefabs/Triggers/OnLemmings/LemmingsTriggerLove") as GameObject;
     }
+    private Vector2 currentY;
 
     private void Awake()
     {
@@ -49,6 +53,8 @@ public class Lemmings : MonoBehaviour {
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         animatorLemmings = GetComponent<Animator>();
         m_Lemming = gameObject;
+        m_transform = GetComponent<Transform>();
+        currentY = m_transform.position;
     }
 
     private void Start()
@@ -56,6 +62,24 @@ public class Lemmings : MonoBehaviour {
 		fsm = new FSM<Lemmings>();
         fsm.Configure(this, MovingState.Instance);
         LoadLemmings();
+    }
+
+    private float ancientY;
+
+    private void Update() {
+        if(IsFalling()) {
+            ancientY = Vector2.Distance(m_transform.position, currentY);
+        }
+        else {
+            if(ancientY > 3f) {
+                fsm.ChangeState(DeadFallState.Instance);
+            }
+            currentY = m_transform.position;
+        }
+    }
+
+    public void LemmingsDeath() {
+        Debug.Log("lemming death");
     }
 
     public void Flip() {
@@ -66,10 +90,15 @@ public class Lemmings : MonoBehaviour {
     }
 
     public bool IsFalling() {
-        if(m_rigidbody2D.velocity.y < 0)
-            return true;
-        else 
+        if(IsOnGround()) {
             return false;
+        }
+        else {
+            if(m_rigidbody2D.velocity.y < 0)
+                return true;
+            else 
+                return false;
+            }
     }
 
     public bool IsOnGround() {
@@ -82,11 +111,11 @@ public class Lemmings : MonoBehaviour {
     public void AnimatorList() {
         switch(enumLemmings)
         {
-            case EnumLemmings.BOUNCE : 
+            case EnumLemmings.PLATFORM : 
                 Instantiate(triggersToSpawn[0], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
                 LemmingsManager.instance.RemoveLemmings(gameObject);
             break;
-			case EnumLemmings.STONE : 
+			case EnumLemmings.GRAVITY : 
 				Instantiate(triggersToSpawn[1], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
 				LemmingsManager.instance.RemoveLemmings(gameObject);
 			break;
@@ -94,6 +123,19 @@ public class Lemmings : MonoBehaviour {
 				Instantiate(triggersToSpawn[2], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
 				LemmingsManager.instance.RemoveLemmings(gameObject);
 			break;
+            case EnumLemmings.STONE : 
+                Instantiate(triggersToSpawn[3], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+                LemmingsManager.instance.RemoveLemmings(gameObject);
+           break;
+
+            case EnumLemmings.BOUNCE : 
+                Instantiate(triggersToSpawn[4], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+                LemmingsManager.instance.RemoveLemmings(gameObject);
+                break;
+            case EnumLemmings.LOVE : 
+                Instantiate(triggersToSpawn[5], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
+                LemmingsManager.instance.RemoveLemmings(gameObject);
+                break;
 		}
 		
 		isClicked = false;

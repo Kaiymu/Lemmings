@@ -11,8 +11,7 @@ public class MovingPlatform : MonoBehaviour {
     public float speed;
 
     private  Vector3 target ;
-    public  GameObject pointsToGo;
-
+  
 	private  void Update () {
         if(canMove) {
             target = pointToReach.transform.position;

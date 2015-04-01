@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 421352}
   - 212: {fileID: 21291432}
   - 61: {fileID: 6162978}
-  - 114: {fileID: 11423060}
+  - 114: {fileID: 11456580}
   m_Layer: 0
-  m_Name: InteruptorArea
+  m_Name: InteruptorStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.75, y: .0900000036, z: 0}
+  m_LocalPosition: {x: 1.14534354, y: -4.20062304, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 7.84000015, y: 6.25}
---- !u!114 &11423060
+--- !u!114 &11456580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 148948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f50abf71b1f6e440b178d998257c872, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a4a530ad3c973b44bf1f65756cd9e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   platformToActivate: {fileID: 0}
