@@ -24,7 +24,7 @@ public class LandingState : FSMState<Lemmings> {
             fsm.ChangeState(MovingState.Instance);
     }
     
-    // Appelée une fois lorsque la state est quitée
+    // Appelé une fois lorsque la state est quittée
     public override void End(Lemmings o, FSM<Lemmings> fsm) {
         
     }

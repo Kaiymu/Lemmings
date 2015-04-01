@@ -76,10 +76,6 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 	}
 
     private void PauseLemmings() {
-        //for parcourir lemmings
-        //getcomponent Lemmings .fsm.changestate(pausestate.instance)
-        // --- (walkingstate.instance)
-
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {
             _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
         }
