@@ -16,7 +16,7 @@ public abstract class CollisionManager : MonoBehaviour {
 				EnterLNeutralCollision(collider.gameObject);
 
 			if(collider.gameObject.GetComponent<Lemmings>().enumLemmings == EnumLemmings.BOUNCE)
-				EnterLGravityCollision(collider.gameObject);
+                EnterLBouncerCollision(collider.gameObject);
 
 			if(collider.gameObject.GetComponent<Lemmings>().enumLemmings == EnumLemmings.GRAVITY)
 				EnterLGravityCollision(collider.gameObject);
@@ -37,6 +37,9 @@ public abstract class CollisionManager : MonoBehaviour {
 
             if(collider.gameObject.GetComponent<LemmingsTriggers>().lemmingsTransformedType == EnumLemmingsTransformed.GRAVITY)
                 EnterLGravityCollision(collider.gameObject);
+
+            if(collider.gameObject.GetComponent<LemmingsTriggers>().lemmingsTransformedType == EnumLemmingsTransformed.STONE)
+                EnterLStoneCollision(collider.gameObject);
 		}
     }
 
@@ -50,6 +53,7 @@ public abstract class CollisionManager : MonoBehaviour {
 
 	protected virtual void EnterLAllCollision(GameObject Lemmings){}
 	protected virtual void EnterLNeutralCollision(GameObject Lemmings){}
+    protected virtual void EnterLBouncerCollision(GameObject Lemmings){}
 	protected virtual void EnterLGravityCollision(GameObject Lemmings){}
 	protected virtual void EnterLStoneCollision(GameObject Lemmings){}
 	protected virtual void EnterLPlatformCollision(GameObject Lemmings){}

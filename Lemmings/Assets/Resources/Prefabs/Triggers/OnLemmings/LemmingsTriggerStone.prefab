@@ -9,12 +9,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 435002}
   - 114: {fileID: 11465782}
+  - 114: {fileID: 11447604}
   - 212: {fileID: 21245400}
   - 61: {fileID: 6140316}
   - 95: {fileID: 9535962}
+  - 50: {fileID: 5038226}
   m_Layer: 0
   m_Name: LemmingsTriggerStone
-  m_TagString: Untagged
+  m_TagString: LemmingsTriggers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,11 +28,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.54204226, y: -.550621271, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5038226
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102448}
+  m_Mass: 9.99999975e-05
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6140316
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -61,6 +78,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11447604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4d9e85996c8c647829a9e9d1897a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lemmingsTransformedType: 1
 --- !u!114 &11465782
 MonoBehaviour:
   m_ObjectHideFlags: 1

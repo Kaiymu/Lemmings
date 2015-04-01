@@ -10,6 +10,7 @@ TagManager:
   - CAULDRON_BEHAVIOR
   - Cauldron
   - LemmingsTriggers
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
