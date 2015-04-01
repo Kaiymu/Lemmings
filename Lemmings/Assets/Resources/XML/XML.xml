@@ -14,6 +14,7 @@
   
   <Lemming type="lemmingNeutral" spawnDeltaTime="6" color="BLUE"/>
 	<Lemming type="lemmingNeutral" spawnDeltaTime="7" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="8" color="YELLOW"/>
 	
   <!--<Lemming type="lemmingBounce" spawnDeltaTime="2" color="YELLOW"/>
 	<Lemming type="lemmingLove" spawnDeltaTime="4" color="YELLOW"/>

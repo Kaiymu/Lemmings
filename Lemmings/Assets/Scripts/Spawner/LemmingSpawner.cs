@@ -44,26 +44,30 @@ public class LemmingSpawner : MonoBehaviour {
         lemmings = xmlDoc.GetElementsByTagName("Lemming");
     }
 
+    private float deltatimeCustom = 0f;
     private void LemmingsToSpawn() {
 
-        if(i < lemmings.Count) {
-            XmlNode lemming = lemmings[i];
+        if(!GameManager.instance.isPaused) {
+            if(i < lemmings.Count) {
+                deltatimeCustom += Time.deltaTime;
+                XmlNode lemming = lemmings[i];
 
-            float ancienSpawnDeltaTime = spawnDeltaTime;
-            spawnDeltaTime = float.Parse(lemming.Attributes["spawnDeltaTime"].Value);
+                float ancienSpawnDeltaTime = spawnDeltaTime;
+                spawnDeltaTime = float.Parse(lemming.Attributes["spawnDeltaTime"].Value);
 
-            if ((spawnDeltaTime + ancienSpawnDeltaTime) < Time.time) {
-                i++;
-                string type = lemming.Attributes["type"].Value.ToString();
-				string color = lemming.Attributes["color"].Value.ToString();
+                if ((spawnDeltaTime + ancienSpawnDeltaTime) < deltatimeCustom) {
+                    i++;
+                    string type = lemming.Attributes["type"].Value.ToString();
+    				string color = lemming.Attributes["color"].Value.ToString();
 
-				if(RetrieveLemmingsFromType(type) != null) {
-					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
-					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
-					newLemming.GetComponent<Lemmings>().lemmingColor = color;
-                    _gameManager.allLemmings.Add(newLemming);
-                    _gameManager.SetNumberOfLemmings(1);
-				}             
+    				if(RetrieveLemmingsFromType(type) != null) {
+    					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
+    					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
+    					newLemming.GetComponent<Lemmings>().lemmingColor = color;
+                        _gameManager.allLemmings.Add(newLemming);
+                        _gameManager.SetNumberOfLemmings(1);
+    				}             
+                }
             }
         }
     }
