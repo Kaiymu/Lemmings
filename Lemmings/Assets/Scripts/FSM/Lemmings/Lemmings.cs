@@ -79,7 +79,7 @@ public class Lemmings : MonoBehaviour {
     }
 
     public void LemmingsDeath() {
-        Debug.Log("lemming death");
+        LemmingsManager.instance.RemoveLemming(gameObject);
     }
 
     public void Flip() {
@@ -125,16 +125,16 @@ public class Lemmings : MonoBehaviour {
 			break;
             case EnumLemmings.STONE : 
                 Instantiate(triggersToSpawn[3], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-                LemmingsManager.instance.RemoveLemmings(gameObject);
+                LemmingsManager.instance.RemoveLemming(gameObject);
            break;
 
             case EnumLemmings.BOUNCE : 
                 Instantiate(triggersToSpawn[4], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-                LemmingsManager.instance.RemoveLemmings(gameObject);
+                LemmingsManager.instance.RemoveLemming(gameObject);
                 break;
             case EnumLemmings.LOVE : 
                 Instantiate(triggersToSpawn[5], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-                LemmingsManager.instance.RemoveLemmings(gameObject);
+                LemmingsManager.instance.RemoveLemming(gameObject);
                 break;
 		}
 		

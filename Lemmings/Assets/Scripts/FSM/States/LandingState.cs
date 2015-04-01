@@ -20,7 +20,7 @@ public class LandingState : FSMState<Lemmings> {
     }
 
     public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
-        if(!o.IsFalling())
+        if(o.IsFalling())
             fsm.ChangeState(MovingState.Instance);
     }
     

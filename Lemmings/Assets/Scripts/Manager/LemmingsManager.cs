@@ -107,7 +107,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
         if(_gameManager.allLemmings.Contains(lemmingToDelete)) {
             _gameManager.allLemmings.Remove(lemmingToDelete);
             _gameManager.SetNumberOfLemmings(-1);
-
+            Debug.Log(lemmingToDelete);
             Destroy(lemmingToDelete);
         }
     }
