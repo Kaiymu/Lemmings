@@ -39,7 +39,7 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 			_canCombineLemming = false;
 			_selectedCauldron = _inputManager.GetGameObjectClicked();
 
-			if(_selectedCauldron != null && _lemmingManager.canCombineLemmings == true && _selectedCauldron.tag == "Cauldron_Behavior"  || _selectedCauldron.tag == "Cauldron_Environment") {
+			if(_selectedCauldron != null && _lemmingManager.canCombineLemmings == true && _selectedCauldron.tag == "CAULDRON_BEHAVIOR"  || _selectedCauldron.tag == "CAULDRON_ENVIRONMENT") {
 				CombineLemmings();
 			}
 		} if(_leftMouseButton == false && _canCombineLemming == false) {

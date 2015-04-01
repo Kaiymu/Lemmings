@@ -22,11 +22,9 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 	public List<ColorCombination> combinations;
 
 	public void CombineTwoLemmings(GameObject firstLemming, GameObject secondLemming, string selectedCauldron) {
-
 		string firstLemmingColor = firstLemming.GetComponent<Lemmings>().lemmingColor;
 		string secondLemmingColor = secondLemming.GetComponent<Lemmings>().lemmingColor;
-		Debug.Log(firstLemmingColor);
-		Debug.Log(secondLemmingColor);
+
 		for(int i = 0; i < combinations.Count; i++) {
 			if(combinations[i].color1.ToString() == firstLemmingColor || combinations[i].color1.ToString() == secondLemmingColor) {
 				if(combinations[i].color2.ToString() == firstLemmingColor || combinations[i].color2.ToString() == secondLemmingColor) {
