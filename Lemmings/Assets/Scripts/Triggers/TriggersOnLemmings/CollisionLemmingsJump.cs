@@ -7,10 +7,12 @@ public class CollisionLemmingsJump : CollisionManager {
         _animatorTrigger = GetComponent<Animator>();
     }
 	
-	public float jumpSpeed;
+	public float jumpHeight;
+    public float jumpSpeed;
 	protected override void EnterLAllCollision(GameObject lemmings) {
 		Lemmings _lemmings = lemmings.GetComponent<Lemmings>();
 
+        _lemmings.jumpHeight = jumpHeight;
 		_lemmings.jumpSpeed = jumpSpeed;
 		_lemmings.fsm.ChangeState(BounceState.Instance);
         _animatorTrigger.SetInteger("TriggerAnimation", 1);

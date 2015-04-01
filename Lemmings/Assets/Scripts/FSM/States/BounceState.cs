@@ -12,7 +12,7 @@ public class BounceState : FSMState<Lemmings> {
 	
 	// Appelée une fois au changement de state
 	public override void Begin (Lemmings o, FSM<Lemmings> fsm) {
-		o.m_rigidbody2D.velocity = new Vector2(o.moveSpeed, o.jumpSpeed);
+		o.m_rigidbody2D.velocity = new Vector2(o.jumpSpeed, o.jumpHeight);
 		fsm.ChangeState(MovingState.Instance);
 	}
 	
