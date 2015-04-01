@@ -55,7 +55,6 @@ public class LemmingSpawner : MonoBehaviour {
     
     private GameObject RetrieveLemmingsFromType(string type)
     {
-		Debug.Log (type);
         switch(type)
         {
             case "lemmingNeutral" :
