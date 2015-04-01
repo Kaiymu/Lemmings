@@ -25,9 +25,8 @@ public class PauseState : FSMState<Lemmings> {
 
     }
 
-	public override void Transition(Lemmings o, FSM<Lemmings> fsm)
-    {
-        o.animatorLemmings.speed = speedAnimation;
+	public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
+
     }
 
     public override void End(Lemmings o, FSM<Lemmings> fsm) {
