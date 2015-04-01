@@ -667,6 +667,15 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9590464, guid: 8b37695e313cfee438decb76240a5a71, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96921b1b4c40f6447b82183b72b72cc3, type: 2}
+    - target: {fileID: 21233222, guid: 8b37695e313cfee438decb76240a5a71, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4be6882537e04469437037d6d8442b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b37695e313cfee438decb76240a5a71, type: 2}
   m_IsPrefabParent: 0
