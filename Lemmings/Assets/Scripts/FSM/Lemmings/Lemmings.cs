@@ -84,15 +84,15 @@ public class Lemmings : MonoBehaviour {
         {
             case EnumLemmings.BOUNCE : 
                 Instantiate(triggersToSpawn[0], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-                LemmingsManager.instance.RemoveLemmings(gameObject);
+                LemmingsManager.instance.RemoveLemming(gameObject);
             break;
 			case EnumLemmings.STONE : 
 				Instantiate(triggersToSpawn[1], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-				LemmingsManager.instance.RemoveLemmings(gameObject);
+				LemmingsManager.instance.RemoveLemming(gameObject);
 			break;
 			case EnumLemmings.POISON : 
 				Instantiate(triggersToSpawn[2], new Vector2(transform.position.x, transform.position.y + 0.1f), transform.rotation);
-				LemmingsManager.instance.RemoveLemmings(gameObject);
+				LemmingsManager.instance.RemoveLemming(gameObject);
 			break;
 		}
 		
