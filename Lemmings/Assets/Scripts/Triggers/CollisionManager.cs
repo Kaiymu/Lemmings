@@ -34,6 +34,9 @@ public abstract class CollisionManager : MonoBehaviour {
 		if(collider.gameObject.tag == "LemmingsTriggers") {
 			if(collider.gameObject.GetComponent<LemmingsTriggers>().lemmingsTransformedType == EnumLemmingsTransformed.POISON)
 				EnterLPoisonCollision(collider.gameObject);
+
+            if(collider.gameObject.GetComponent<LemmingsTriggers>().lemmingsTransformedType == EnumLemmingsTransformed.GRAVITY)
+                EnterLGravityCollision(collider.gameObject);
 		}
     }
 

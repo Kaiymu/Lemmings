@@ -27,7 +27,7 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 
 	private void Update() {
 		GetMousePressed();
-		//CheckIfClickOnCauldron();
+		CheckIfClickOnCauldron();
 	}
 	
 	private void GetMousePressed() {
@@ -39,9 +39,12 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 			_canCombineLemming = false;
 			_selectedCauldron = _inputManager.GetGameObjectClicked();
 
-			if(_selectedCauldron != null && _lemmingManager.canCombineLemmings == true && _selectedCauldron.tag == "CAULDRON_BEHAVIOR"  || _selectedCauldron.tag == "CAULDRON_ENVIRONMENT") {
-				CombineLemmings();
-			}
+            if(_selectedCauldron != null) {
+                if(_lemmingManager.canCombineLemmings == true && _selectedCauldron.tag == "CAULDRON_BEHAVIOR"  || _selectedCauldron.tag == "CAULDRON_ENVIRONMENT") {
+                    CombineLemmings();
+                }
+            }
+			
 		} if(_leftMouseButton == false && _canCombineLemming == false) {
 			_canCombineLemming = true;
 		}
@@ -49,13 +52,6 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 
 	private void CombineLemmings() {
 		_combinationManager.CombineTwoLemmings(_lemmingManager.lemmings[0], _lemmingManager.lemmings[1], _selectedCauldron.tag);
-
-		GameObject newLemming = Instantiate(Resources.Load("Lemming") as GameObject);
-		_gameManager.SetNumberOfLemmings(1);
-		_gameManager.allLemmings.Add(newLemming);
-
-		newLemming.transform.position = _lemmingManager.lemmings[0].transform.position;
-		newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
 
 		foreach(GameObject _lemming in _lemmingManager.lemmings) {
 			if(_gameManager.allLemmings.Contains(_lemming)) {

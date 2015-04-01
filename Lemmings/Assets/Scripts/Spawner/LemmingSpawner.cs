@@ -12,6 +12,8 @@ public class LemmingSpawner : MonoBehaviour {
     private int i = 0;
     private float spawnDeltaTime = 0f;
 
+    private GameManager _gameManager;
+
     private void LoadLemmings() { 
         lemmingsPrefabs[0] = Resources.Load("Prefabs/Lemmings/LemmingsNeutral") as GameObject;
         lemmingsPrefabs[1] = Resources.Load("Prefabs/Lemmings/LemmingsBounce") as GameObject;
@@ -23,15 +25,23 @@ public class LemmingSpawner : MonoBehaviour {
     }
     
     private void Start() {
-        XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.LoadXml(xmlLDSetup.text);
-        lemmings = xmlDoc.GetElementsByTagName("Lemming");
-
+        SetXML();
+        SetManager();
         LoadLemmings();
     }
     
     private void Update() {
         LemmingsToSpawn();
+    }
+
+    private void SetManager() {
+        _gameManager = GameManager.instance;
+    }
+
+    private void SetXML() {
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(xmlLDSetup.text);
+        lemmings = xmlDoc.GetElementsByTagName("Lemming");
     }
 
     private void LemmingsToSpawn() {
@@ -51,6 +61,8 @@ public class LemmingSpawner : MonoBehaviour {
 					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
 					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
 					newLemming.GetComponent<Lemmings>().lemmingColor = color;
+                    _gameManager.allLemmings.Add(newLemming);
+                    _gameManager.SetNumberOfLemmings(1);
 				}             
             }
         }
