@@ -4,11 +4,11 @@ using System.Collections;
 public class ButtonManager : MonoBehaviour {
 
     void OnMouseEnter() {
-        this.gameObject.GetComponent<Renderer>().material.color = Color.red;
+        this.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
 
     void OnMouseExit() {
-        this.gameObject.GetComponent<Renderer>().material.color = new Color(1,1,1,1);
+        this.transform.localScale = new Vector3(1, 1, 1);
     }
 
     void OnMouseDown() {
@@ -20,5 +20,13 @@ public class ButtonManager : MonoBehaviour {
         if(this.gameObject.name == "Replay") {
             Application.LoadLevel(Application.loadedLevel);
         }
+    }
+
+
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+    void Update() {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 }
