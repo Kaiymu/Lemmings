@@ -56,7 +56,7 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
             PlayLemmings();
 			canCombineLemmings = false;
 			lemmings.Remove(_selectedLemming);
-			_selectedLemming.GetComponent<Renderer>().material.color = Color.grey;
+			//_selectedLemming.GetComponent<Renderer>().material.color = Color.grey;
 		} else if(lemmings.Count > 1) {
 			Debug.Log("Two lemmings already selected");
 		} else {
@@ -65,12 +65,12 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 				canCombineLemmings = true;
 				lemmings.Add(_selectedLemming);
 
-				_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
+				//_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
 			} else {
 				canCombineLemmings = false;
 				lemmings.Add(_selectedLemming);
 				
-				_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
+				//_selectedLemming.GetComponent<Renderer>().material.color = Color.red;
 			}
 		}
 	}
