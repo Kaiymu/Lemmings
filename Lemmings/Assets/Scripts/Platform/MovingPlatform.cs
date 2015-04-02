@@ -4,15 +4,15 @@ using System.Collections;
 public class MovingPlatform : MonoBehaviour {
 
     [HideInInspector]
-    public bool canMove = false;
+    public bool canMove = true;
 
     [Header("Tu met ici le plateform to reach mis sur ta scène")]
     public GameObject pointToReach;
     public float speed;
 
     private  Vector3 target ;
-  
-	private  void Update () {
+
+	private void Update () {
         if(canMove) {
             target = pointToReach.transform.position;
             target.z = transform.position.z;
@@ -22,7 +22,7 @@ public class MovingPlatform : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider) {
         if(collider.gameObject.tag == "MovingPlatform") {
-            canMove = false;
+            //canMove = false;
         }
     }
 
