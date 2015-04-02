@@ -20,14 +20,6 @@ public class InputManager : SingleBehaviour<InputManager> {
 		}
 	}
 
-	public bool RightMouseButton() {
-		if(Input.GetMouseButton(1)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	public GameObject GetGameObjectClicked()
 	{
 		Vector3 _pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
