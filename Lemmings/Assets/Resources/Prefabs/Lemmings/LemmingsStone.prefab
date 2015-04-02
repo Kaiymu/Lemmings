@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11498414}
   - 50: {fileID: 5061492}
   - 95: {fileID: 9532836}
-  - 61: {fileID: 6103142}
+  - 58: {fileID: 5894242}
   m_Layer: 8
   m_Name: LemmingsStone
   m_TagString: Lemming
@@ -47,8 +47,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
---- !u!61 &6103142
-BoxCollider2D:
+--- !u!58 &5894242
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,9 +57,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .419999987, y: .569999993}
+  m_Radius: .379999995
 --- !u!95 &9532836
 Animator:
   serializedVersion: 3

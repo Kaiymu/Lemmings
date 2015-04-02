@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831a472099e1af74394839eead8de17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lemmingsTransformedType: 4
+  lemmingsTransformedType: 2
 --- !u!212 &21273304
 SpriteRenderer:
   m_ObjectHideFlags: 1

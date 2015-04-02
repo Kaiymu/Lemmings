@@ -24,9 +24,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14534354, y: -4.20062304, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 4.32999992, y: 6.07999992, z: 0}
+  m_LocalScale: {x: 1.51999998, y: 2.04999995, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +42,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 7.84000015, y: 6.25}
+  m_Size: {x: .970000029, y: .409999996}
 --- !u!114 &11419294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 106584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e749cb7121a91a645b64171252699477, type: 3}
+  m_Script: {fileID: 11500000, guid: eec8f6dc5b75bf54b8ad8536b0aaebf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   platformToActivate: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f67785301ee7e646aad3891f41c57a4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .727941155, g: .727941155, b: .727941155, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

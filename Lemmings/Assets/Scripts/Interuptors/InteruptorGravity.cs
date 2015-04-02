@@ -7,10 +7,12 @@ public class InteruptorGravity : CollisionManager {
     public GameObject platformToActivate;
 
     protected override void EnterLGravityCollision(GameObject Lemmings){
+        Debug.Log("toto");
         PlatformToActivate();
     }
 
     protected void PlatformToActivate() {
+        Debug.Log("toto");
         if(platformToActivate != null) {
             platformToActivate.SetActive(true);
             if(platformToActivate.GetComponent<MovingPlatform>() != null) {

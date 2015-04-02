@@ -1651,6 +1651,8 @@ MonoBehaviour:
   allLemmings: []
   numberOfLemmings: 0
   isPaused: 0
+  numberMaxOfLemmings: 0
+  numberMaxOfLemmingsToLoose: 0
 --- !u!1 &1281523577
 GameObject:
   m_ObjectHideFlags: 0

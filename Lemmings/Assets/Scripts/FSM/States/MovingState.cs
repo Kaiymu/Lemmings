@@ -22,6 +22,9 @@ public class MovingState : FSMState<Lemmings> {
 
 	// Utilosée pour effectuer la transition chaque seconde, appelée comme un update
 	public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
+
+        Debug.Log(o.IsOnGround());
+
         if(o.IsFalling())
             fsm.ChangeState(LandingState.Instance);
 	}

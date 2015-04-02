@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400518}
   - 50: {fileID: 5094782}
   - 95: {fileID: 9536430}
-  - 61: {fileID: 6182112}
+  - 58: {fileID: 5869686}
   m_Layer: 8
   m_Name: LemmingsPoison
   m_TagString: Lemming
@@ -47,8 +47,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
---- !u!61 &6182112
-BoxCollider2D:
+--- !u!58 &5869686
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,9 +57,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: .0299999993}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .419999987, y: .579999983}
+  m_Radius: .540000021
 --- !u!95 &9536430
 Animator:
   serializedVersion: 3

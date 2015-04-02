@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11478546}
   - 50: {fileID: 5068258}
   - 95: {fileID: 9551476}
-  - 61: {fileID: 6183980}
+  - 58: {fileID: 5834594}
   m_Layer: 8
   m_Name: LemmingsGravity
   m_TagString: Lemming
@@ -47,8 +47,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
---- !u!61 &6183980
-BoxCollider2D:
+--- !u!58 &5834594
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,9 +57,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: -.0199999996}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .419999987, y: .699999988}
+  m_Radius: .419999987
 --- !u!95 &9551476
 Animator:
   serializedVersion: 3
