@@ -7,6 +7,6 @@ public class GUIManager : SingleBehaviour<GUIManager> {
 	public Text numberOfLemmings;
 
 	public void SetNumberOfLemmings(int number) {
-		numberOfLemmings.text = number.ToString();
+		//numberOfLemmings.text = number.ToString();
 	}
 }
