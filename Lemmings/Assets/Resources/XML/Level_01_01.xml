@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<LemmingsLDSetup>
+	
+  
+  
+  <Lemming type="lemmingBounce" spawnDeltaTime="1" color="YELLOW"/>
+	<Lemming type="lemmingPlatform" spawnDeltaTime="2" color="YELLOW"/>
+  
+	
+  <!--<Lemming type="lemmingBounce" spawnDeltaTime="2" color="YELLOW"/>
+	<Lemming type="lemmingLove" spawnDeltaTime="4" color="YELLOW"/>
+	<Lemming type="lemmingPlatform" spawnDeltaTime="6" color="YELLOW"/>
+	<Lemming type="lemmingPoison" spawnDeltaTime="8" color="YELLOW"/>
+	<Lemming type="lemmingStone" spawnDeltaTime="6" color="YELLOW"/>
+	<Lemming type="lemmingGravity" spawnDeltaTime="7" color="YELLOW"/>-->
+</LemmingsLDSetup>
