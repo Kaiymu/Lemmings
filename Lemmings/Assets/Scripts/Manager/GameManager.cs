@@ -23,10 +23,6 @@ public class GameManager : SingleBehaviour<GameManager> {
 		SetList();
 	}
 
-    private void Start() {
-        Debug.Log(numberMaxOfLemmings);
-    }
-
     private void Update() {
         IsVisible();
     }
@@ -55,4 +51,8 @@ public class GameManager : SingleBehaviour<GameManager> {
 		numberOfLemmings += number;
 		_GUIManager.SetNumberOfLemmings(numberOfLemmings);
 	}
+
+    public void SetNumberMaxOfLemmings(int number) {
+        numberMaxOfLemmings = number;
+    }
 }

@@ -42,7 +42,7 @@ public class LemmingSpawner : MonoBehaviour {
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(xmlLDSetup.text);
         lemmings = xmlDoc.GetElementsByTagName("Lemming");
-        _gameManager.numberMaxOfLemmings = lemmings.Count;
+        _gameManager.SetNumberMaxOfLemmings(lemmings.Count);
     }
 
     private float deltatimeCustom = 0f;
