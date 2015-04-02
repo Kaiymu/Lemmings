@@ -19,27 +19,29 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 16f63ba3e44078547ac26eb304caad78, type: 3}
-    - time: .0833333358
+    - time: .0769230798
       value: {fileID: 21300000, guid: 229ce4917a8825d4c85c62d42499a412, type: 3}
-    - time: .166666672
+    - time: .15384616
       value: {fileID: 21300000, guid: 7f18670adfd9c5f4fa9746672e1cb8e3, type: 3}
-    - time: .25
+    - time: .230769232
       value: {fileID: 21300000, guid: b0d28b02dc727254d83bef8bea9663ae, type: 3}
-    - time: .333333343
+    - time: .307692319
       value: {fileID: 21300000, guid: c8d4da8f0a9da5d4ea9ccda551225368, type: 3}
-    - time: .416666657
+    - time: .384615391
       value: {fileID: 21300000, guid: 4af7c9f2be4102d43a51a2029030a621, type: 3}
-    - time: .5
+    - time: .461538464
       value: {fileID: 21300000, guid: f055d3267c631fd46b213678d1d008c4, type: 3}
-    - time: .583333313
+    - time: .538461566
       value: {fileID: 21300000, guid: 1d8509d1200440f428a38b08fd98ab36, type: 3}
-    - time: .666666687
+    - time: .615384638
       value: {fileID: 21300000, guid: 1d62bb5b86a3f154782ba494bf61b5c8, type: 3}
+    - time: .692307711
+      value: {fileID: 21300000, guid: 78ff5ba09d6188b4bad43b9abcdead58, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 13
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -62,10 +64,11 @@ AnimationClip:
     - {fileID: 21300000, guid: f055d3267c631fd46b213678d1d008c4, type: 3}
     - {fileID: 21300000, guid: 1d8509d1200440f428a38b08fd98ab36, type: 3}
     - {fileID: 21300000, guid: 1d62bb5b86a3f154782ba494bf61b5c8, type: 3}
+    - {fileID: 21300000, guid: 78ff5ba09d6188b4bad43b9abcdead58, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .75
+    m_StopTime: .769230783
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,7 +88,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .666666687
+  - time: .692307711
     functionName: EndAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
