@@ -59,4 +59,7 @@ public abstract class CollisionManager : MonoBehaviour {
 	protected virtual void EndAnimation(int animation) {
 		_animatorTrigger.SetInteger("TriggerAnimation", animation);
 	}
+
+    protected virtual void DeathAnimation() {
+    }
 }

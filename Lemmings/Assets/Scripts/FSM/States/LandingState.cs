@@ -20,11 +20,11 @@ public class LandingState : FSMState<Lemmings> {
     }
 
     public override void Transition(Lemmings o, FSM<Lemmings> fsm) {
-        if(o.IsFalling())
+       if(!o.IsFalling())
             fsm.ChangeState(MovingState.Instance);
     }
     
-    // Appelée une fois lorsque la state est quitée
+    // Appelé une fois lorsque la state est quittée
     public override void End(Lemmings o, FSM<Lemmings> fsm) {
         
     }

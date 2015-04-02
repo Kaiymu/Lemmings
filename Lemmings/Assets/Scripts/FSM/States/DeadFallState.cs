@@ -17,7 +17,6 @@ public class DeadFallState : FSMState<Lemmings> {
     
     // Appelée comme un update
     public override void Execute(Lemmings o, FSM<Lemmings> fsm) {
-
     }
     
     // Utilosée pour effectuer la transition chaque seconde, appelée comme un update

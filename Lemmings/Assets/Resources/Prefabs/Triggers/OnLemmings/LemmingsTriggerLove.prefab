@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21252240}
   - 61: {fileID: 6164724}
   - 95: {fileID: 9556448}
+  - 114: {fileID: 11485642}
   m_Layer: 0
   m_Name: LemmingsTriggerLove
   m_TagString: LemmingsTriggers
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.23899984, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,11 +39,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 128758}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: -.0299999993}
+  m_Offset: {x: -.0299999993, y: -.119999997}
   serializedVersion: 2
-  m_Size: {x: .460000008, y: .610000014}
+  m_Size: {x: 11.4399996, y: .610000014}
 --- !u!95 &9556448
 Animator:
   serializedVersion: 3
@@ -60,6 +61,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11485642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0071c0429a87584da1e4414a5b63f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearthAnimation: {fileID: 143392, guid: 1f3e087b71f44164eac0ae446296ac18, type: 2}
 --- !u!212 &21252240
 SpriteRenderer:
   m_ObjectHideFlags: 1

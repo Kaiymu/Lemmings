@@ -35,6 +35,16 @@ public class Lemmings : MonoBehaviour {
     [HideInInspector]
     public GameObject m_Lemming;
 
+	[Range(0.1f, 10f)]
+	public float distanceDeathFall;
+	public float timerToDeathFall = 5f;
+	
+	private float maxTimer;
+	[HideInInspector]
+	public bool activateLove;
+	private bool canDieFromFall = true;
+
+
     private GameObject[] triggersToSpawn = new GameObject[6];
 
     private void LoadLemmings() { 
@@ -60,23 +70,47 @@ public class Lemmings : MonoBehaviour {
     private void Start()
     {
 		fsm = new FSM<Lemmings>();
-        fsm.Configure(this, MovingState.Instance);
+        if(GameManager.instance.isPaused)
+            fsm.Configure(this, PauseState.Instance);
+        else 
+            fsm.Configure(this, MovingState.Instance);
         LoadLemmings();
     }
 
     private float ancientY;
 
     private void Update() {
-        if(IsFalling()) {
-            ancientY = Vector2.Distance(m_transform.position, currentY);
-        }
-        else {
-            if(ancientY > 3f) {
-                fsm.ChangeState(DeadFallState.Instance);
-            }
-            currentY = m_transform.position;
-        }
+
+		if(activateLove)
+			InLove();
+
+		if(canDieFromFall)
+			DeathByFall();
     }
+
+	private void DeathByFall() { 
+		if(IsFalling()) {
+			ancientY = Vector2.Distance(m_transform.position, currentY);
+		}
+		else {
+			if(ancientY > distanceDeathFall) {
+				fsm.ChangeState(DeadFallState.Instance);
+			}
+			currentY = m_transform.position;
+		}
+	}
+
+	private void InLove() {
+		maxTimer += Time.deltaTime;
+
+		if(maxTimer < timerToDeathFall) {
+			canDieFromFall = false;
+		}
+		else {
+			activateLove = false;
+			canDieFromFall = true;
+		}
+	}
 
     public void LemmingsDeath() {
         LemmingsManager.instance.RemoveLemming(gameObject);
