@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="56" height="32" tilewidth="32" tileheight="32" nextobjectid="1">
+ <properties>
+  <property name="unity:scale" value="0.01"/>
+ </properties>
+ <tileset firstgid="1" name="5z1KX" tilewidth="32" tileheight="32">
+  <image source="5z1KX.png" width="736" height="672"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.181818" y="0">
+     <polygon points="0,0 32,0 14.3636,31.6364"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="27">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32" height="32.0625"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="484" name="tilemap" tilewidth="32" tileheight="32">
+  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/tilemap.png" width="320" height="64"/>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.125"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0.0625" width="32.0625" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="9.65217" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="0" x="18.8696" y="0" width="13.1739" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.0869565" width="32.087" height="32.1739"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.0869565" y="-0.130435" width="32.1739" height="32.2174"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.0869565" y="-0.0434783" width="32.1304" height="32.087"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.0434783" width="32" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object id="0" x="38.375" y="16.3125" height="0.0625"/>
+    <object id="0" x="0" y="0" width="32.087" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.125" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="504" name="dur haut bordure copy" tilewidth="32" tileheight="32">
+  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut bordure copy.png" width="32" height="32"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.125" height="32.125"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="505" name="dur haut borduresplit" tilewidth="32" tileheight="32">
+  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut borduresplit.png" width="32" height="32"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="56" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmMEKwjAQRPX//7RRKxTF3poegmHJJnHdbBOdgaWlh04elDzS5Xwyy8N3PY36QtcCPvVOyy7w6XdadoFPLy/ftSb6Zv/sojxH8HHZ+RyZ6YtxnfG1CPjGzr/wWe3X1gHfO7V+ujL30gnvuDFrzK3rUz7qJ25iB0mGemwq8HHvafV93jvZs8AnC/hsAj5ZeuPTPnflfBUSe0vDkzn/5TwkOYe5Sj7qOKkvS/771YBv7IBv7ICvnBb/LVPnv/ha60stPm1vpc5/1JEp53L+2wCrQXtH
+  </data>
+ </layer>
+</map>
