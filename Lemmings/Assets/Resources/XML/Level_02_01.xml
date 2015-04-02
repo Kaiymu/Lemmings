@@ -10,7 +10,7 @@
   <Lemming type="lemmingPoison" spawnDeltaTime="4" color="YELLOW"/>
   <Lemming type="lemmingStone" spawnDeltaTime="5" color="YELLOW"/>
 
-  <Lemming type="lemmingNeutral" spawnDeltaTime="5" color="YELLOW"/>
+  <Lemming type="lemmingNeutral" spawnDeltaTime="7" color="YELLOW"/>
   
 	
   <!--<Lemming type="lemmingBounce" spawnDeltaTime="2" color="YELLOW"/>
