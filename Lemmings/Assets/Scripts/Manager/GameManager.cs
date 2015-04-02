@@ -11,6 +11,10 @@ public class GameManager : SingleBehaviour<GameManager> {
     [HideInInspector]
     public bool isPaused;
 
+    [HideInInspector]
+    public int numberMaxOfLemmings;
+    public int numberMaxOfLemmingsToLoose;
+
 	private GUIManager _GUIManager;
     private LemmingsManager _lemmingManager;
 
@@ -18,6 +22,10 @@ public class GameManager : SingleBehaviour<GameManager> {
 		SetManager();
 		SetList();
 	}
+
+    private void Start() {
+        Debug.Log(numberMaxOfLemmings);
+    }
 
     private void Update() {
         IsVisible();
