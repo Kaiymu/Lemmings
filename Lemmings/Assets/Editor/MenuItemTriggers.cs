@@ -77,24 +77,24 @@ public class MenuItemTriggers : MonoBehaviour
         InstantiateObject(o);
     }
     
-    [MenuItem("Custom Objects/Lemmings trigger/OnMaps/LemmingsPlatform")]
+    [MenuItem("Custom Objects/Lemmings trigger/OnMap/LemmingsPlatform")]
     private static void CreatePlatformLemmingsTrigger()
     {
-        Object o = Resources.Load("Prefabs/Triggers/OnMaps/LemmingsCreatePlatform");
+        Object o = Resources.Load("Prefabs/Triggers/OnMap/LemmingsCreatePlatform");
         InstantiateObject(o);
     }
     
-    [MenuItem("Custom Objects/Lemmings trigger/OnMaps/LemmingsGravity")]
+    [MenuItem("Custom Objects/Lemmings trigger/OnMap/LemmingsGravity")]
     private static void CreateGravityLemmingsTrigger()
     {
-        Object o = Resources.Load("Prefabs/Triggers/OnMaps/LemmingsTriggerGravity");
+        Object o = Resources.Load("Prefabs/Triggers/OnMap/LemmingsTriggerGravity");
         InstantiateObject(o);
     }
     
-    [MenuItem("Custom Objects/Lemmings trigger/OnMaps/LemmingsPoison")]
+    [MenuItem("Custom Objects/Lemmings trigger/OnMap/LemmingsPoison")]
     private static void CreatePoisonLemmingsTrigger()
     {
-        Object o = Resources.Load("Prefabs/Triggers/OnMaps/LemmingsTriggerPoisoned");
+        Object o = Resources.Load("Prefabs/Triggers/OnMap/LemmingsTriggerPoisoned");
         InstantiateObject(o);
     }
    
@@ -123,21 +123,21 @@ public class MenuItemTriggers : MonoBehaviour
     [MenuItem("Custom Objects/TRIGGERS/Platforms/PlatformAppear")]
     private static void CreatePlatformAppear()
     {
-        Object o = Resources.Load("Prefabs/Interuptor/PlatformAppear");
+        Object o = Resources.Load("Prefabs/Platforms/PlatformAppear");
         InstantiateObject(o);
     }
     
     [MenuItem("Custom Objects/TRIGGERS/Interuptor/PlatformMoving")]
     private static void CreatePlatformMoving()
     {
-        Object o = Resources.Load("Prefabs/Interuptor/InteruptorGravity");
+        Object o = Resources.Load("Prefabs/Platforms/PlatformMoving");
         InstantiateObject(o);
     }
     
     [MenuItem("Custom Objects/TRIGGERS/Interuptor/PointToReach")]
     private static void CreatePointToReach()
     {
-        Object o = Resources.Load("Prefabs/Interuptor/PointToReach");
+        Object o = Resources.Load("Prefabs/Platforms/PointToReach");
         InstantiateObject(o);
     }
 

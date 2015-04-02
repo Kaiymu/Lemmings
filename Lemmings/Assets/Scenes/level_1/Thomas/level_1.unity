@@ -87,48 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &649905844
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.04999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.21000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.82999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471186, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 39950fe1bea53df4fb260d58bcdfe3d8, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1916091729
 Prefab:
   m_ObjectHideFlags: 0
@@ -168,10 +126,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11453286, guid: 8b37695e313cfee438decb76240a5a71, type: 2}
-      propertyPath: xmlLDSetup
-      value: 
-      objectReference: {fileID: 4900000, guid: a758569a50392884b979c8ee8e61f423, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b37695e313cfee438decb76240a5a71, type: 2}
   m_IsPrefabParent: 0

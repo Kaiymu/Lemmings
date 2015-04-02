@@ -4,7 +4,6 @@ using System.Collections;
 public class WaterCollision : CollisionManager {
 
 	protected override void EnterLAllCollision(GameObject Lemmings) {
-        Lemmings.GetComponent<Animator>().SetInteger("Lemmings", 5);
-
+        Lemmings.GetComponent<Lemmings>().fsm.ChangeState(SinkState.Instance);
     }
 }
