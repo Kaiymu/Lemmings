@@ -127,13 +127,6 @@ public class MenuItemTriggers : MonoBehaviour
         InstantiateObject(o);
     }
     
-    [MenuItem("Custom Objects/TRIGGERS/Interuptor/PlatformMoving")]
-    private static void CreatePlatformMoving()
-    {
-        Object o = Resources.Load("Prefabs/Interuptor/InteruptorGravity");
-        InstantiateObject(o);
-    }
-    
     [MenuItem("Custom Objects/TRIGGERS/Interuptor/PointToReach")]
     private static void CreatePointToReach()
     {
