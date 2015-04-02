@@ -99,7 +99,7 @@ MonoBehaviour:
   m_transform: {fileID: 0}
   isClicked: 0
   m_Lemming: {fileID: 0}
-  distanceDeathFall: 0
+  distanceDeathFall: 5
   timerToDeathFall: 0
   activateLove: 0
 --- !u!212 &21272160

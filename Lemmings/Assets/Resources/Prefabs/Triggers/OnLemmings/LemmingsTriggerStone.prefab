@@ -13,7 +13,7 @@ GameObject:
   - 212: {fileID: 21245400}
   - 61: {fileID: 6140316}
   - 95: {fileID: 9535962}
-  - 50: {fileID: 5038226}
+  - 50: {fileID: 5085472}
   - 61: {fileID: 6198714}
   m_Layer: 0
   m_Name: LemmingsTriggerStone
@@ -34,13 +34,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5038226
+--- !u!50 &5085472
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102448}
-  m_Mass: 9.99999975e-05
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -61,7 +61,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: -.0299999993, y: -.0299999993}
   serializedVersion: 2
-  m_Size: {x: .460000008, y: .610000014}
+  m_Size: {x: .600000024, y: .600000024}
 --- !u!61 &6198714
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: -.0299999993, y: -.0900000036}
   serializedVersion: 2
-  m_Size: {x: .400000006, y: .449999988}
+  m_Size: {x: .300000012, y: .400000006}
 --- !u!95 &9535962
 Animator:
   serializedVersion: 3

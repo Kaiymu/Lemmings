@@ -99,6 +99,9 @@ MonoBehaviour:
   m_transform: {fileID: 0}
   isClicked: 0
   m_Lemming: {fileID: 0}
+  distanceDeathFall: 5
+  timerToDeathFall: 5
+  activateLove: 0
 --- !u!212 &21208128
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,18 +5,27 @@ using System.Collections.Generic;
 public class LoveTrigger : CollisionManager {
 
     public GameObject hearthAnimation;
-    private List<GameObject> listLemmingsInLove = new List<GameObject>();
-	protected override void EnterLAllCollision(GameObject Lemmings) {
-        listLemmingsInLove.Add(Lemmings);
+    private int i = 0;
+
+    private Animator _animator;
+
+    private void Start() {
+        _animator = GetComponent<Animator>();
     }
 
-    // J'instancie les coeurs, et j'enlève la capacités sur tous, et je détruit le lemmings.
-    protected override void DeathAnimation() {
-        Instantiate(hearthAnimation, transform.position, Quaternion.identity);
+	protected override void EnterLAllCollision(GameObject Lemmings) {
+       
+        _animator.SetInteger("TriggerAnimation", 1);
+        Lemmings.GetComponent<Lemmings>().activateLove = true;
 
-		for(int i = 0; i < listLemmingsInLove.Count; i++)  {
-			listLemmingsInLove[i].GetComponent<Lemmings>().activateLove = true;
-		}
-        Destroy(gameObject, 0.1f);
+        i++;
+        if(i == 5) {
+            i = 0;
+            Instantiate(hearthAnimation, transform.position, Quaternion.identity);
+        }
+    }
+
+    protected override void ExitLAllCollision(GameObject Lemmings) {
+        _animator.SetInteger("TriggerAnimation", 0);
     }
 }
