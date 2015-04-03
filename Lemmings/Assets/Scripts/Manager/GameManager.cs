@@ -6,6 +6,7 @@ public class GameManager : SingleBehaviour<GameManager> {
 
 	[HideInInspector]
 	public List<GameObject> allLemmings;
+    [HideInInspector]
     public int numberOfLemmings;
 
     [HideInInspector]
@@ -13,8 +14,11 @@ public class GameManager : SingleBehaviour<GameManager> {
 
     [HideInInspector]
     public int numberMaxOfLemmings;
+    [HideInInspector]
     public float numberMaxOfLemmingsToLoose;
+    [HideInInspector]
     public int deadLemmings;
+    [HideInInspector]
     public int numberOfLemmingsSaved;
 
     public Transform endLevel;

@@ -17,12 +17,12 @@ public class LoveTrigger : CollisionManager {
        
         _animator.SetInteger("TriggerAnimation", 1);
         Lemmings.GetComponent<Lemmings>().activateLove = true;
-
-        i++;
+        Instantiate(hearthAnimation, transform.position, Quaternion.identity);
+        /*i++;
         if(i == 5) {
             i = 0;
             Instantiate(hearthAnimation, transform.position, Quaternion.identity);
-        }
+        }*/
     }
 
     protected override void ExitLAllCollision(GameObject Lemmings) {
