@@ -68,11 +68,11 @@ public class Lemmings : MonoBehaviour {
         currentY = m_transform.position;
 
         fsm = new FSM<Lemmings>();
+        fsm.Configure(this, MovingState.Instance);
     }
 
     private void Start()
     {
-        fsm.Configure(this, MovingState.Instance);
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
