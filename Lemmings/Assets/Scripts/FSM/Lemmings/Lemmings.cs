@@ -71,12 +71,12 @@ public class Lemmings : MonoBehaviour {
     private void Start()
     {
         fsm = new FSM<Lemmings>();
-        fsm.Configure(this, MovingState.Instance);/*
+        fsm.Configure(this, MovingState.Instance);
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
             fsm.Configure(this, MovingState.Instance);
-*/
+
         LoadLemmings();
 
         containerLemmingsTrigger = GameObject.FindGameObjectWithTag("TriggerLemmingsContainer").transform;
@@ -182,7 +182,7 @@ public class Lemmings : MonoBehaviour {
                 lemmingsTrigger.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, 0f);
             }
             LemmingsManager.instance.RemoveLemming(gameObject);
-    		isClicked = false;
+            isClicked = false;
         }
     }
 }
