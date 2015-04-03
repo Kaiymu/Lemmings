@@ -126,6 +126,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11401554, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: xmlLDSetup
+      value: 
+      objectReference: {fileID: 4900000, guid: 10d63bd3a7cb5544a9ea48cf34a05f37, type: 3}
+    - target: {fileID: 11444166, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: deadLemmings
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444166, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: numberOfLemmingsSaved
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444166, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: numberMaxOfLemmingsToLoose
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 485278, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.40999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 485278, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .219999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccb2378ac82b3094a8b678b8410e9cf0, type: 2}
   m_IsPrefabParent: 0
