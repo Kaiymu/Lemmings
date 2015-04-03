@@ -20,7 +20,7 @@ public class EndLevel : MonoBehaviour {
         if(collider.gameObject.tag == "Lemming") {
             _gameManager.numberOfLemmingsSaved++;
 
-            _lemmingsManager.RemoveLemming(collider.gameObject);
+            _lemmingsManager.RemoveLemming(collider.gameObject, "saved");
 
             if(_gameManager.allLemmings.Count == 0) {
                 _gameManager.state = GameManager.STATE.WIN;

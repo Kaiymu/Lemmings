@@ -69,7 +69,7 @@ public class GameManager : SingleBehaviour<GameManager> {
             if(allLemmings[i].GetComponent<Renderer>().isVisible == false) { 
                 yield return new WaitForSeconds(5);
                 if(allLemmings[i].GetComponent<Renderer>().isVisible == false) {
-                    _lemmingManager.RemoveLemming(allLemmings[i]);
+                    _lemmingManager.RemoveLemming(allLemmings[i], "other");
                 }
             }
         }
@@ -84,13 +84,14 @@ public class GameManager : SingleBehaviour<GameManager> {
 		allLemmings = new List<GameObject>();
     }
 
-	public void SetNumberOfLemmings(int number) {
+	public void SetNumberOfLemmings(int number, string isDeadOrSaved) {
 		numberOfLemmings += number;
 		_GUIManager.SetNumberOfLemmings(numberOfLemmings);
 
-        if(number < 0) {
+        if(number < 0 && isDeadOrSaved == "dead") {
             deadLemmings++;
-            if(deadLemmings < numberMaxOfLemmingsToLoose && numberOfLemmingsSaved > 0) {
+            if(deadLemmings > numberMaxOfLemmingsToLoose && numberOfLemmingsSaved > 0) {
+                isPaused = true;
                 state = STATE.GAMEOVER;
                 StateMachine();
             }

@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5068258}
   - 95: {fileID: 9551476}
   - 58: {fileID: 5834594}
+  - 114: {fileID: 11492148}
   m_Layer: 8
   m_Name: LemmingsGravity
   m_TagString: Lemming
@@ -102,6 +103,17 @@ MonoBehaviour:
   distanceDeathFall: 3.04999995
   timerToDeathFall: 5
   activateLove: 0
+--- !u!114 &11492148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98543c083a8b5d4584a46f4e8d2ce81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21235122
 SpriteRenderer:
   m_ObjectHideFlags: 1

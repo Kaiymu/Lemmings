@@ -107,10 +107,10 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 		}
     }
 
-    public void RemoveLemming(GameObject lemmingToDelete) {
+    public void RemoveLemming(GameObject lemmingToDelete, string isDeadOrSaved) {
         if(_gameManager.allLemmings.Contains(lemmingToDelete)) {
             _gameManager.allLemmings.Remove(lemmingToDelete);
-            _gameManager.SetNumberOfLemmings(-1);
+            _gameManager.SetNumberOfLemmings(-1, isDeadOrSaved);
             Destroy(lemmingToDelete);
         }
     }

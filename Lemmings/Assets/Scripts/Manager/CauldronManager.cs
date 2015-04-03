@@ -51,18 +51,15 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 	}
 
 	private void CombineLemmings() {
-        if(_lemmingManager.lemmings[0] != null && _lemmingManager.lemmings[1] != null) {
-    		_combinationManager.CombineTwoLemmings(_lemmingManager.lemmings[0], _lemmingManager.lemmings[1], _selectedCauldron.tag);
+		_combinationManager.CombineTwoLemmings(_lemmingManager.lemmings[0], _lemmingManager.lemmings[1], _selectedCauldron.tag);
 
-    		foreach(GameObject _lemming in _lemmingManager.lemmings) {
-    			if(_gameManager.allLemmings.Contains(_lemming)) {
-                    Debug.Log(_lemming);
-    				_gameManager.allLemmings.Remove(_lemming);
-    				_gameManager.SetNumberOfLemmings(-1);
-    			}
-    			Destroy(_lemming);
-    		}
-        }
+		foreach(GameObject _lemming in _lemmingManager.lemmings) {
+			if(_gameManager.allLemmings.Contains(_lemming)) {
+				_gameManager.allLemmings.Remove(_lemming);
+				_gameManager.SetNumberOfLemmings(-1, "dead");
+			}
+			Destroy(_lemming);
+		}
 
 		_lemmingManager.lemmings.Clear();
 	}
