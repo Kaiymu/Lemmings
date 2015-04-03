@@ -19,7 +19,7 @@
   </tile>
  </tileset>
  <tileset firstgid="484" name="tilemap" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/tilemap.png" width="320" height="64"/>
+  <image source="../SourceImages/tilemap.png" width="320" height="64"/>
   <tile id="6">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
@@ -96,7 +96,7 @@
   </tile>
  </tileset>
  <tileset firstgid="504" name="dur haut bordure copy" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut bordure copy.png" width="32" height="32"/>
+  <image source="../SourceImages/dur haut bordure copy.png" width="32" height="32"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.125" height="32.125"/>
@@ -104,7 +104,7 @@
   </tile>
  </tileset>
  <tileset firstgid="505" name="dur haut borduresplit" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut borduresplit.png" width="32" height="32"/>
+  <image source="../SourceImages/dur haut borduresplit.png" width="32" height="32"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
@@ -112,13 +112,13 @@
   </tile>
  </tileset>
  <tileset firstgid="506" name="tile (1)" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level 2/tile (1).png" width="211" height="129"/>
+  <image source="../SourceImages/tile (1).png" width="211" height="129"/>
  </tileset>
  <tileset firstgid="530" name="tile (1)" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level 2/tile (1).png" width="211" height="129"/>
+  <image source="../SourceImages/tile (1).png" width="211" height="129"/>
  </tileset>
  <tileset firstgid="554" name="tiled2coupe" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level 2/tiled2coupe.png" width="256" height="128"/>
+  <image source="../SourceImages/tiled2coupe.png" width="256" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="0" x="0.0434783" y="0" width="32" height="32"/>

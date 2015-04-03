@@ -4595,6 +4595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfLemmings: {fileID: 1167520037}
+  timer: {fileID: 0}
 --- !u!222 &1757211521
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@
   </tile>
  </tileset>
  <tileset firstgid="484" name="tilemap" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/tilemap.png" width="320" height="64"/>
+  <image source="SourceImages/tilemap.png" width="320" height="64"/>
   <tile id="6">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
@@ -93,7 +93,7 @@
   </tile>
  </tileset>
  <tileset firstgid="504" name="dur haut bordure copy" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut bordure copy.png" width="32" height="32"/>
+  <image source="SourceImages/dur haut bordure copy.png" width="32" height="32"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.125" height="32.125"/>
@@ -101,7 +101,7 @@
   </tile>
  </tileset>
  <tileset firstgid="505" name="dur haut borduresplit" tilewidth="32" tileheight="32">
-  <image source="../Documents/ISART Projets/GameWeek2015/assets level1/dur haut borduresplit.png" width="32" height="32"/>
+  <image source="SourceImages/dur haut borduresplit.png" width="32" height="32"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
