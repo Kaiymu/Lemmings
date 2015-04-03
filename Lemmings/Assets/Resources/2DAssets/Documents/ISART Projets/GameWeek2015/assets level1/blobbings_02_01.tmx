@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="56" height="32" tilewidth="32" tileheight="32" nextobjectid="1">
+ <properties>
+  <property name="unity:scale" value="0.01"/>
+ </properties>
+ <tileset firstgid="1" name="tilemap" tilewidth="32" tileheight="32">
+  <image source="tilemap.png" width="320" height="64"/>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.125"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0.0625" width="32.0625" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="9.65217" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="0" x="18.8696" y="0" width="13.1739" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.0869565" width="32.087" height="32.1739"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.0869565" y="-0.130435" width="32.1739" height="32.2174"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.0869565" y="-0.0434783" width="32.1304" height="32.087"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.0434783" width="32" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object id="0" x="38.375" y="16.3125" height="0.0625"/>
+    <object id="0" x="0" y="0" width="32.087" height="32.0435"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.125" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="dur haut bordure copy" tilewidth="32" tileheight="32">
+  <image source="dur haut bordure copy.png" width="32" height="32"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.125" height="32.125"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="22" name="dur haut borduresplit" tilewidth="32" tileheight="32">
+  <image source="dur haut borduresplit.png" width="32" height="32"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.0625" height="32.0625"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="56" height="32" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztmNsKgzAQRH3T3kBa2v//1MYHaViySbrdTJN2BgZF0PWA5BDXCZdr6A08awXNi2ciZ5HPfyZyFvn8ZyJnIfnuoY/E9XPowbnf4NOy8S2i8wfd7u+Jr0XIN3b+hQ+1XqNDvldq/XRUzq3dn3EyvNe7fNJPWmMHWSo9Nhf4tOe0+j4vUx9rFvlsIR8m5LOlNz7vfVfOV3tib3l4Mue/nIcs+7Clkk86zurLkv9+NeQbO+QbO+Qrp8V/y9T+Lz7W+tKLz9tbqf2fdGTKuZr/ntJ4EaA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="56" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1bEOgCAMRVFXB8LC/3+rLO7VUuDRe5KONtyYQLvOVPrUPm31QYLQp40+bZn6bsdYePb/nUz/70T0aaNP26i+mXf+F6P6ivP7KPTZ9+yIPvueHWXqm3lvz8L7ro0+bfRpo09blr66+iBB3r4HkQwJWQ==
+  </data>
+ </layer>
+</map>
