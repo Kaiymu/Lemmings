@@ -22,6 +22,11 @@ public class EndLevel : MonoBehaviour {
 
             _lemmingsManager.RemoveLemming(collider.gameObject, "saved");
 
+            if(_gameManager.numberOfLemmingsSaved >= (_gameManager.numberMaxOfLemmings - _gameManager.numberMaxOfLemmingsToLoose)) {
+                _gameManager.state = GameManager.STATE.WIN;
+                _gameManager.StateMachine();
+            }
+
             if(_gameManager.allLemmings.Count == 0) {
                 _gameManager.state = GameManager.STATE.WIN;
                 _gameManager.StateMachine();

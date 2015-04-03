@@ -173,8 +173,8 @@ public class Lemmings : MonoBehaviour {
     		}
 
             GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
-            GameManager.instance.allLemmings.Add(lemmingsTrigger);
-            GameManager.instance.SetNumberOfLemmings(1, "other");
+            //GameManager.instance.allLemmings.Add(lemmingsTrigger);
+            //GameManager.instance.SetNumberOfLemmings(1, "other");
 
             if(containerLemmingsTrigger != null) {
                 lemmingsTrigger.transform.parent = containerLemmingsTrigger.transform;
