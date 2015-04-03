@@ -15,7 +15,7 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 		public enum CAULDRON {CAULDRON_ENVIRONMENT, CAULDRON_BEHAVIOR};
 		public CAULDRON cauldron;
 
-		public enum NEWLEMMING {POISON, STONE, BOUNCE, PLATFORM, GRAVITY, LOVE, NEUTRAL};
+		public enum NEWLEMMING {POISON, STONE, BOUNCE, PLATFORM, GRAVITY, NEUTRAL};
 		public NEWLEMMING newLemming;
 	}
 
@@ -38,11 +38,10 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
     private void LoadLemmings() { 
         lemmingsPrefabs[0] = Resources.Load("Prefabs/Lemmings/LemmingsNeutral") as GameObject;
         lemmingsPrefabs[1] = Resources.Load("Prefabs/Lemmings/LemmingsBounce") as GameObject;
-        lemmingsPrefabs[2] = Resources.Load("Prefabs/Lemmings/LemmingsLove") as GameObject;
-        lemmingsPrefabs[3] = Resources.Load("Prefabs/Lemmings/LemmingsPlatform") as GameObject;
-        lemmingsPrefabs[4] = Resources.Load("Prefabs/Lemmings/LemmingsPoison") as GameObject;
-        lemmingsPrefabs[5] = Resources.Load("Prefabs/Lemmings/LemmingsStone") as GameObject;
-        lemmingsPrefabs[6] = Resources.Load("Prefabs/Lemmings/LemmingsGravity") as GameObject;
+        lemmingsPrefabs[2] = Resources.Load("Prefabs/Lemmings/LemmingsPlatform") as GameObject;
+        lemmingsPrefabs[3] = Resources.Load("Prefabs/Lemmings/LemmingsPoison") as GameObject;
+        lemmingsPrefabs[4] = Resources.Load("Prefabs/Lemmings/LemmingsStone") as GameObject;
+        lemmingsPrefabs[5] = Resources.Load("Prefabs/Lemmings/LemmingsGravity") as GameObject;
     }
 
 	public void CombineTwoLemmings(GameObject firstLemming, GameObject secondLemming, string selectedCauldron) {
@@ -75,16 +74,14 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
                 return lemmingsPrefabs[0];
             case "BOUNCE" : 
                 return lemmingsPrefabs[1];
-            case "LOVE" :
-                return lemmingsPrefabs[2];
             case "PLATFORM" : 
-                return lemmingsPrefabs[3];
+                return lemmingsPrefabs[2];
             case "POISON" : 
-                return lemmingsPrefabs[4];
+                return lemmingsPrefabs[3];
             case "STONE" : 
-                return lemmingsPrefabs[5];
+                return lemmingsPrefabs[4];
             case "GRAVITY" : 
-                return lemmingsPrefabs[6];
+                return lemmingsPrefabs[5];
         }
         return null;
     }
