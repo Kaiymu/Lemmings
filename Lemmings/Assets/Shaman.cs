@@ -12,6 +12,7 @@ public class Shaman : MonoBehaviour {
     private int i = 0;
 
 	void Start () {
+        GameManager.instance.isPaused = true;
         SetXML();
         XmlNode shamanTextXML = shamanTextsXML[0];
         shamanText.text = shamanTextXML.Attributes["text"].Value.ToString();
@@ -34,6 +35,16 @@ public class Shaman : MonoBehaviour {
             shamanText.text = shamanTextXML.Attributes["text"].Value.ToString();
             i++;
         }
+
+        if(i >= shamanTextsXML.Count) {
+            FadeOutShamanAndText();
+        }
+    }
+   
+    private void FadeOutShamanAndText() {
+        GameManager.instance.isPaused = false;
+        gameObject.SetActive(false);
+        shamanText.gameObject.SetActive(false);
     }
 	
 }

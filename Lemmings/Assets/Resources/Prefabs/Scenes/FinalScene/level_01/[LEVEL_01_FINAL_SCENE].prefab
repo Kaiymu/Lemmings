@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &138694
 GameObject:
   m_ObjectHideFlags: 1
@@ -1065,7 +1065,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9000001, y: 3.04999995, z: 0}
+  m_LocalPosition: {x: -7.63000011, y: .529999971, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 437262}
@@ -1101,7 +1101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.159999996, y: -5.46000004, z: 0}
+  m_LocalPosition: {x: -.159999996, y: -5.80999994, z: 0}
   m_LocalScale: {x: 17.3442516, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 417964}
@@ -2828,7 +2828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96795afddfe6281448c38f77fd9ed1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmlLDSetup: {fileID: 4900000, guid: f1c2d216ae7887e4b96dcff3afb6f171, type: 3}
+  xmlLDSetup: {fileID: 4900000, guid: 10d63bd3a7cb5544a9ea48cf34a05f37, type: 3}
 --- !u!114 &11492524
 MonoBehaviour:
   m_ObjectHideFlags: 1
