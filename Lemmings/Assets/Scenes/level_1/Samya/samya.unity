@@ -1362,15 +1362,15 @@ Canvas:
   m_GameObject: {fileID: 272261254}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1012151669}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
 --- !u!114 &272261259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,7 +2130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774159269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.78999996, y: 3.89899993, z: 0}
+  m_LocalPosition: {x: -6.54099989, y: 3.89599991, z: 0}
   m_LocalScale: {x: .29375577, y: .242322892, z: .5}
   m_Children: []
   m_Father: {fileID: 2029693222}
@@ -2578,10 +2578,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1279618328}
   m_RootOrder: 1
-  m_AnchorMin: {x: .0680000037, y: .745652556}
-  m_AnchorMax: {x: .195388108, y: .82620436}
-  m_AnchoredPosition: {x: .399999619, y: -.199999809}
-  m_SizeDelta: {x: .0999984741, y: 1.10000038}
+  m_AnchorMin: {x: .0976954252, y: .757601976}
+  m_AnchorMax: {x: .165870637, y: .813000023}
+  m_AnchoredPosition: {x: 0, y: .5}
+  m_SizeDelta: {x: .700000763, y: -.100000381}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1028917061
 MonoBehaviour:
@@ -2598,9 +2598,9 @@ MonoBehaviour:
   m_Color: {r: 1, g: .627451003, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: fdbe37f194fc86347beeb221c34efcdf, type: 3}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -3388,7 +3388,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430562667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.40999985, y: 3.88000011, z: 0}
+  m_LocalPosition: {x: -8.40999985, y: 3.88000011, z: 10}
   m_LocalScale: {x: .29375577, y: .242322892, z: .5}
   m_Children: []
   m_Father: {fileID: 2029693222}
@@ -3449,7 +3449,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: 4502f344f3be36e4b96d425c4a785b48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1498504538

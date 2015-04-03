@@ -11,6 +11,8 @@ TagManager:
   - Cauldron
   - LemmingsTriggers
   - MovingPlatform
+  - Fire
+  - EndLevel
   layers:
   - Default
   - TransparentFX
