@@ -112,22 +112,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &110446
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 496498}
-  - 114: {fileID: 11498290}
-  m_Layer: 0
-  m_Name: CombinationManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &114386
 GameObject:
   m_ObjectHideFlags: 1
@@ -745,6 +729,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &164410
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454498}
+  - 114: {fileID: 11467102}
+  m_Layer: 0
+  m_Name: CombinationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &165478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1288,7 @@ Transform:
   - {fileID: 495010}
   - {fileID: 22499210}
   - {fileID: 466512}
-  - {fileID: 496498}
+  - {fileID: 454498}
   m_Father: {fileID: 409450}
   m_RootOrder: 1
 --- !u!4 &406004
@@ -1578,6 +1578,18 @@ Transform:
   - {fileID: 435806}
   m_Father: {fileID: 470980}
   m_RootOrder: 0
+--- !u!4 &454498
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 405034}
+  m_RootOrder: 5
 --- !u!4 &455368
 Transform:
   m_ObjectHideFlags: 1
@@ -1781,7 +1793,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9000001, y: 3.04999995, z: 0}
+  m_LocalPosition: {x: -1.40999997, y: .219999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456670}
@@ -1846,18 +1858,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442166}
   m_RootOrder: 0
---- !u!4 &496498
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 405034}
-  m_RootOrder: 5
 --- !u!4 &498584
 Transform:
   m_ObjectHideFlags: 1
@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96795afddfe6281448c38f77fd9ed1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmlLDSetup: {fileID: 4900000, guid: f1c2d216ae7887e4b96dcff3afb6f171, type: 3}
+  xmlLDSetup: {fileID: 4900000, guid: 10d63bd3a7cb5544a9ea48cf34a05f37, type: 3}
 --- !u!114 &11402506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2943,8 +2943,8 @@ MonoBehaviour:
   numberOfLemmings: 2
   isPaused: 0
   numberMaxOfLemmings: 0
-  numberMaxOfLemmingsToLoose: 2
-  deadLemmings: 2
+  numberMaxOfLemmingsToLoose: 5
+  deadLemmings: 5
   numberOfLemmingsSaved: 2
   endLevel: {fileID: 22406586}
   gameOver: {fileID: 22477966}
@@ -3157,6 +3157,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49514d2b7083e5b4fb8b7fb8fbaa63f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11467102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10385ac3268ff474099c194a25181a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combinations:
+  - name: Poison
+    color1: 1
+    color2: 1
+    cauldron: 0
+    newLemming: 0
+  - name: Roch
+    color1: 0
+    color2: 0
+    cauldron: 1
+    newLemming: 1
+  - name: Jump
+    color1: 2
+    color2: 2
+    cauldron: 1
+    newLemming: 2
+  - name: Platform
+    color1: 1
+    color2: 1
+    cauldron: 0
+    newLemming: 3
+  - name: Gravity
+    color1: 0
+    color2: 0
+    cauldron: 0
+    newLemming: 4
+  - name: Love
+    color1: 2
+    color2: 2
+    cauldron: 1
+    newLemming: 5
 --- !u!114 &11471078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3378,48 +3420,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11498290
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10385ac3268ff474099c194a25181a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combinations:
-  - name: Poison
-    color1: 0
-    color2: 1
-    cauldron: 1
-    newLemming: 0
-  - name: Roch
-    color1: 0
-    color2: 1
-    cauldron: 0
-    newLemming: 1
-  - name: Jump
-    color1: 2
-    color2: 1
-    cauldron: 0
-    newLemming: 2
-  - name: Platform
-    color1: 2
-    color2: 1
-    cauldron: 1
-    newLemming: 3
-  - name: Gravity
-    color1: 0
-    color2: 2
-    cauldron: 0
-    newLemming: 4
-  - name: Love
-    color1: 0
-    color2: 2
-    cauldron: 1
-    newLemming: 5
 --- !u!124 &12468894
 Behaviour:
   m_ObjectHideFlags: 1
