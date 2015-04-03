@@ -70,7 +70,6 @@ public class LemmingSpawner : MonoBehaviour {
     					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
     					newLemming.GetComponent<Lemmings>().lemmingColor = color;
                         newLemming.GetComponent<SpriteRenderer>().color = ColorParser(color);
-                        Debug.Log(newLemming);
                         _gameManager.allLemmings.Add(newLemming);
                         _gameManager.SetNumberOfLemmings(1, "saved");
     				}             
