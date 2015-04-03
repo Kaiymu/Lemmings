@@ -25,11 +25,23 @@ public class EndLevel : MonoBehaviour {
             if(_gameManager.numberOfLemmingsSaved >= (_gameManager.numberMaxOfLemmings - _gameManager.numberMaxOfLemmingsToLoose)) {
                 _gameManager.state = GameManager.STATE.WIN;
                 _gameManager.StateMachine();
+
+                _gameManager.isPaused = true;
+                
+                for(int i = 0 ; i < _gameManager.allLemmings.Count; i++) {
+                    if(_gameManager.allLemmings[i].GetComponent<Lemmings>() != null)
+                        _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+                }
             }
 
             if(_gameManager.allLemmings.Count == 0) {
                 _gameManager.state = GameManager.STATE.WIN;
                 _gameManager.StateMachine();
+
+                for(int i = 0 ; i < _gameManager.allLemmings.Count; i++) {
+                    if(_gameManager.allLemmings[i].GetComponent<Lemmings>() != null)
+                        _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+                }
             }
         }
            

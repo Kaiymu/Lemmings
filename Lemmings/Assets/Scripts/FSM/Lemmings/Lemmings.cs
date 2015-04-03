@@ -87,6 +87,11 @@ public class Lemmings : MonoBehaviour {
 
     private void Update() {
 
+		/*if(GameManager.instance.isPaused == true)
+			fsm.ChangeState(PauseState.Instance);
+		else
+			fsm.ChangeState(MovingState.Instance);*/
+
 		if(activateLove)
 			InLove();
 

@@ -88,14 +88,19 @@ public class GameManager : SingleBehaviour<GameManager> {
 		numberOfLemmings += number;
 		_GUIManager.SetNumberOfLemmings(numberOfLemmings);
 
-        if(number < 0 && isDeadOrSaved == "dead") {
-            deadLemmings++;
-            if(deadLemmings > numberMaxOfLemmingsToLoose && numberOfLemmingsSaved > 0) {
+		if(isDeadOrSaved == "dead") {
+			deadLemmings++;
+			if(deadLemmings >= numberMaxOfLemmingsToLoose) {
+				state = STATE.GAMEOVER;
+				StateMachine();
                 isPaused = true;
-                state = STATE.GAMEOVER;
-                StateMachine();
-            }
-        }
+
+				for(int i = 0 ; i < allLemmings.Count; i++) {
+                    if(allLemmings[i].GetComponent<Lemmings>() != null)
+                        allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+				}
+			}
+		}
 	}
 
     public void SetNumberMaxOfLemmings(int number) {
