@@ -70,7 +70,7 @@ public class Lemmings : MonoBehaviour {
 
     private void Start()
     {
-		fsm = new FSM<Lemmings>();
+        fsm = new FSM<Lemmings>();
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
@@ -146,35 +146,40 @@ public class Lemmings : MonoBehaviour {
     }
 
     public void AnimatorList() {
-        int i = 0;
+        if(enumLemmings != EnumLemmings.NEUTRAL) {
+            int i = 0;
 
-        switch(enumLemmings)
-        {
-            case EnumLemmings.PLATFORM : 
-                i = 0;
-            break;
-			case EnumLemmings.GRAVITY : 
-                i = 1;
-			break;
-			case EnumLemmings.POISON : 
-                i = 2;
-			break;
-            case EnumLemmings.STONE : 
-                i = 3;
-           break;
-            case EnumLemmings.BOUNCE : 
-                i = 4;
-            break;
-            case EnumLemmings.LOVE : 
-                i = 5;
+            switch(enumLemmings)
+            {
+                case EnumLemmings.PLATFORM : 
+                    i = 0;
                 break;
-		}
-        GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
-        if(containerLemmingsTrigger != null) {
-            lemmingsTrigger.transform.parent = containerLemmingsTrigger.transform;
-            lemmingsTrigger.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, 0f);
+    			case EnumLemmings.GRAVITY : 
+                    i = 1;
+    			break;
+    			case EnumLemmings.POISON : 
+                    i = 2;
+    			break;
+                case EnumLemmings.STONE : 
+                    i = 3;
+               break;
+                case EnumLemmings.BOUNCE : 
+                    i = 4;
+                break;
+                case EnumLemmings.LOVE : 
+                    i = 5;
+                    break;
+    		}
+            GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
+            GameManager.instance.allLemmings.Add(lemmingsTrigger);
+            GameManager.instance.SetNumberOfLemmings(1);
+
+            if(containerLemmingsTrigger != null) {
+                lemmingsTrigger.transform.parent = containerLemmingsTrigger.transform;
+                lemmingsTrigger.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, 0f);
+            }
+            LemmingsManager.instance.RemoveLemming(gameObject);
+    		isClicked = false;
         }
-        LemmingsManager.instance.RemoveLemming(gameObject);
-		isClicked = false;
     }
 }

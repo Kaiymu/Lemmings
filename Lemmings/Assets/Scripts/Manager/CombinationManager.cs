@@ -55,8 +55,8 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 					if(combinations[i].cauldron.ToString() == selectedCauldron) {
                         if(RetrieveLemmingsFromType(combinations[i].newLemming.ToString()) != null) {
                             GameObject newLemming = Instantiate(RetrieveLemmingsFromType(combinations[i].newLemming.ToString())) as GameObject;
-                            newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
-                            
+                            GameManager.instance.allLemmings.Add(newLemming);
+                            GameManager.instance.SetNumberOfLemmings(1);
                             newLemming.transform.position = _lemmingsManager.lemmings[0].transform.position;
                             newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
                             _lemmingsManager.PlayLemmings();

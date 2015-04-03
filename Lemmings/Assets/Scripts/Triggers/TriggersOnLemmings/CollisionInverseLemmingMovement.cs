@@ -13,7 +13,7 @@ public class CollisionInverseLemmingMovement : CollisionManager {
 		lemmings.GetComponent<Lemmings>().moveSpeed = -move;
         lemmings.GetComponent<Lemmings>().Flip();
 
-        //if(_animatorTrigger != null)
-		  //  _animatorTrigger.SetInteger("TriggerAnimation", 1);
+        if(_animatorTrigger != null)
+		     _animatorTrigger.SetInteger("TriggerAnimation", 1);
 	}
 }

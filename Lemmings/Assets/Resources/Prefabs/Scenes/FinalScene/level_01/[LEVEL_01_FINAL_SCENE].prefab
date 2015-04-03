@@ -822,6 +822,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &182986
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421738}
+  - 61: {fileID: 6171266}
+  - 114: {fileID: 11405544}
+  m_Layer: 0
+  m_Name: WaterCollision(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &184326
 GameObject:
   m_ObjectHideFlags: 1
@@ -1038,6 +1055,7 @@ Transform:
   - {fileID: 437262}
   - {fileID: 490654}
   - {fileID: 481468}
+  - {fileID: 421738}
   m_Father: {fileID: 411066}
   m_RootOrder: 4
 --- !u!4 &418642
@@ -1076,6 +1094,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 489818}
   m_RootOrder: 0
+--- !u!4 &421738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.159999996, y: -5.46000004, z: 0}
+  m_LocalScale: {x: 17.3442516, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417964}
+  m_RootOrder: 3
 --- !u!4 &422182
 Transform:
   m_ObjectHideFlags: 1
@@ -1803,6 +1833,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.27999997, y: 3.83999991}
+--- !u!61 &6171266
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182986}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6172396
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1982,6 +2025,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11405544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7b56b63da87e247a54b8529d53107a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11408374
 MonoBehaviour:
   m_ObjectHideFlags: 1
