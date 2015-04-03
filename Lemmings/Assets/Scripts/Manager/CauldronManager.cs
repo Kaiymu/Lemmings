@@ -56,7 +56,7 @@ public class CauldronManager : SingleBehaviour<CauldronManager> {
 		foreach(GameObject _lemming in _lemmingManager.lemmings) {
 			if(_gameManager.allLemmings.Contains(_lemming)) {
 				_gameManager.allLemmings.Remove(_lemming);
-				_gameManager.SetNumberOfLemmings(-1);
+				_gameManager.SetNumberOfLemmings(-1, "dead");
 			}
 			Destroy(_lemming);
 		}
