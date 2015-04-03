@@ -15,7 +15,7 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 		public enum CAULDRON {CAULDRON_ENVIRONMENT, CAULDRON_BEHAVIOR};
 		public CAULDRON cauldron;
 
-		public enum NEWLEMMING {POISON, STONE, BOUNCE, PLATFORM, GRAVITY, NEUTRAL};
+		public enum NEWLEMMING {POISON, STONE, BOUNCE, PLATFORM, GRAVITY};
 		public NEWLEMMING newLemming;
 	}
 
@@ -54,7 +54,7 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 					if(combinations[i].cauldron.ToString() == selectedCauldron) {
                         if(RetrieveLemmingsFromType(combinations[i].newLemming.ToString()) != null) {
                             GameObject newLemming = Instantiate(RetrieveLemmingsFromType(combinations[i].newLemming.ToString())) as GameObject;
-                            GameManager.instance.allLemmings.Add(newLemming);
+                            //GameManager.instance.allLemmings.Add(newLemming);
                             GameManager.instance.SetNumberOfLemmings(1, "other");
                             newLemming.transform.position = _lemmingsManager.lemmings[0].transform.position;
                             newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
@@ -68,6 +68,7 @@ public class CombinationManager : SingleBehaviour<CombinationManager> {
 
     private GameObject RetrieveLemmingsFromType(string type)
     {
+        Debug.Log(type);
         switch(type)
         {
             case "NEUTRAL" :
