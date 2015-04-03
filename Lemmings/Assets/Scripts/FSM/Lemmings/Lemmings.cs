@@ -73,7 +73,6 @@ public class Lemmings : MonoBehaviour {
 
     private void Start()
     {
-        GameManager.instance.allLemmings.Add(gameObject);
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
