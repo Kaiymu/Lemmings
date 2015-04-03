@@ -4735,32 +4735,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combinations:
   - name: Poison
-    color1: 0
+    color1: 1
     color2: 1
-    cauldron: 1
+    cauldron: 0
     newLemming: 0
   - name: Roch
     color1: 0
-    color2: 1
-    cauldron: 0
+    color2: 0
+    cauldron: 1
     newLemming: 1
   - name: Jump
     color1: 2
-    color2: 1
-    cauldron: 0
+    color2: 2
+    cauldron: 1
     newLemming: 2
   - name: Platform
-    color1: 2
+    color1: 1
     color2: 1
-    cauldron: 1
+    cauldron: 0
     newLemming: 3
   - name: Gravity
     color1: 0
-    color2: 2
+    color2: 0
     cauldron: 0
     newLemming: 4
   - name: Love
-    color1: 0
+    color1: 2
     color2: 2
     cauldron: 1
     newLemming: 5
