@@ -66,11 +66,12 @@ public class Lemmings : MonoBehaviour {
         m_Lemming = gameObject;
         m_transform = GetComponent<Transform>();
         currentY = m_transform.position;
+
+        fsm = new FSM<Lemmings>();
     }
 
     private void Start()
     {
-        fsm = new FSM<Lemmings>();
         fsm.Configure(this, MovingState.Instance);
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
@@ -168,9 +169,6 @@ public class Lemmings : MonoBehaviour {
                 case EnumLemmings.BOUNCE : 
                     i = 4;
                 break;
-                case EnumLemmings.LOVE : 
-                    i = 5;
-                    break;
     		}
 
             GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
