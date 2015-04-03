@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GameManager : SingleBehaviour<GameManager> {
 
 	[HideInInspector]
-	public List<GameObject> allLemmings;
+    public List<GameObject> allLemmings = new List<GameObject>();
     [HideInInspector]
     public int numberOfLemmings;
 
@@ -33,7 +33,6 @@ public class GameManager : SingleBehaviour<GameManager> {
 
 	private void Awake() {
 		SetManager();
-		SetList();
         state = STATE.INGAME;
 	}
 
@@ -79,10 +78,6 @@ public class GameManager : SingleBehaviour<GameManager> {
 		_GUIManager = GUIManager.instance;
         _lemmingManager = LemmingsManager.instance;
 	}
-
-    private void SetList() {
-		allLemmings = new List<GameObject>();
-    }
 
 	public void SetNumberOfLemmings(int number, string isDeadOrSaved) {
 		numberOfLemmings += number;
