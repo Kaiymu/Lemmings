@@ -13,9 +13,9 @@ public class ButtonManager : MonoBehaviour {
 
     void OnMouseDown() {
         if(this.gameObject.name == "Play") {
-            Application.LoadLevel("samya");
+            Application.LoadLevel(1);
         } else {
-            Application.LoadLevel("credits");
+            Application.LoadLevel(5);
         }
         if(this.gameObject.name == "Replay") {
             Application.LoadLevel(Application.loadedLevel);
