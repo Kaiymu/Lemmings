@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
- 
 <LemmingsLDSetup>
-	
-  
-  
-  <Lemming type="lemmingNeutral" spawnDeltaTime="1" color="YELLOW"/>
+  	<Lemming type="lemmingNeutral" spawnDeltaTime="1" color="YELLOW"/>
 	<Lemming type="lemmingNeutral" spawnDeltaTime="2" color="BLUE"/>
-	<Lemming type="lemmingNeutral" spawnDeltaTime="3" color="BLUE"/>
-	<Lemming type="lemmingNeutral" spawnDeltaTime="4" color="BLUE"/>
-	
-  <!--<Lemming type="lemmingBounce" spawnDeltaTime="2" color="YELLOW"/>
-	<Lemming type="lemmingLove" spawnDeltaTime="4" color="YELLOW"/>
-	<Lemming type="lemmingPlatform" spawnDeltaTime="6" color="YELLOW"/>
-	<Lemming type="lemmingPoison" spawnDeltaTime="8" color="YELLOW"/>
-	<Lemming type="lemmingStone" spawnDeltaTime="6" color="YELLOW"/>
-	<Lemming type="lemmingGravity" spawnDeltaTime="7" color="YELLOW"/>-->
+	<Lemming type="lemmingNeutral" spawnDeltaTime="4" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="5" color="BLUE"/>
+  	<Lemming type="lemmingNeutral" spawnDeltaTime="7" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="8" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="10" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="11" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="13" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="14" color="BLUE"/>
 </LemmingsLDSetup>
