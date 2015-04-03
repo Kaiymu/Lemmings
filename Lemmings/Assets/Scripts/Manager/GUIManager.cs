@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GUIManager : SingleBehaviour<GUIManager> {
 
 	public Text numberOfLemmings;
+    public Text numberOfLemmingsSaved;
     public Text timer;
 
     private float _timer;
@@ -32,6 +33,10 @@ public class GUIManager : SingleBehaviour<GUIManager> {
     }
 
     public void SetNumberOfLemmings(int number) {
-        numberOfLemmings.GetComponent<Text>().text = number.ToString() + " / " + _gameManager.numberMaxOfLemmings;
+        numberOfLemmings.text = number.ToString() + " / " + _gameManager.numberMaxOfLemmings;
+    }
+
+    public void SetNumberOfLemmingsSaved(int number) {
+        numberOfLemmingsSaved.text = number.ToString() + " are safe now ! ";
     }
 }

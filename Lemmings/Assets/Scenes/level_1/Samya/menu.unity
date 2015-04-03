@@ -170,6 +170,10 @@ Prefab:
       propertyPath: m_Name
       value: SmokeCauldron 2
       objectReference: {fileID: 0}
+    - target: {fileID: 19861268, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
   m_IsPrefabParent: 0
@@ -239,6 +243,7 @@ GameObject:
   - 124: {fileID: 870144487}
   - 92: {fileID: 870144486}
   - 81: {fileID: 870144485}
+  - 82: {fileID: 870144490}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -311,6 +316,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1538414763}
   m_RootOrder: 0
+--- !u!82 &870144490
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870144484}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b7c1150c948af4d41ae6a4838a3af9ad, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &884807883
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +550,10 @@ Prefab:
       propertyPath: SizeModule.enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 19824708, guid: 504f593e6f373e243be217ff950ca3a8, type: 2}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 504f593e6f373e243be217ff950ca3a8, type: 2}
   m_IsPrefabParent: 0
@@ -560,7 +638,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082803968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b5b20550e39742a49a4a094d9b20e63f, type: 2}
   m_CullingMode: 0
@@ -662,6 +740,10 @@ Prefab:
     - target: {fileID: 19861268, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
       propertyPath: ShapeModule.boxZ
       value: .220641702
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861268, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
+      propertyPath: prewarm
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
@@ -1030,6 +1112,10 @@ Prefab:
     - target: {fileID: 188432, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
       propertyPath: m_Name
       value: SmokeCauldron 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861268, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
+      propertyPath: prewarm
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74eca3af69a0b58459697b87c24f3c47, type: 2}
