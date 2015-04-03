@@ -71,10 +71,12 @@ public class Lemmings : MonoBehaviour {
     private void Start()
     {
         fsm = new FSM<Lemmings>();
+        fsm.Configure(this, MovingState.Instance);/*
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
             fsm.Configure(this, MovingState.Instance);
+*/
         LoadLemmings();
 
         containerLemmingsTrigger = GameObject.FindGameObjectWithTag("TriggerLemmingsContainer").transform;
@@ -170,6 +172,7 @@ public class Lemmings : MonoBehaviour {
                     i = 5;
                     break;
     		}
+
             GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
             GameManager.instance.allLemmings.Add(lemmingsTrigger);
             GameManager.instance.SetNumberOfLemmings(1);

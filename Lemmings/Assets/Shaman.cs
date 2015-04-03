@@ -6,6 +6,7 @@ using System.Xml;
 public class Shaman : MonoBehaviour {
 
     public Text shamanText;
+    public GameObject shamanDialogueBox;
     public TextAsset xmlShamanTextField;
     private XmlNodeList shamanTextsXML;
     
@@ -29,21 +30,23 @@ public class Shaman : MonoBehaviour {
     }
 
     private void DisplayNextText() {
-        if(InputManager.instance.LeftMouseButtonDown() && i < shamanTextsXML.Count)
-        {
-            XmlNode shamanTextXML = shamanTextsXML[i];
-            shamanText.text = shamanTextXML.Attributes["text"].Value.ToString();
-            i++;
+
+        if(InputManager.instance.LeftMouseButtonDown() && i == shamanTextsXML.Count-1) {
+            FadeOutShamanAndText();
         }
 
-        if(i >= shamanTextsXML.Count) {
-            FadeOutShamanAndText();
+        if(InputManager.instance.LeftMouseButtonDown() && i < shamanTextsXML.Count-1)
+        {
+            i++;
+            XmlNode shamanTextXML = shamanTextsXML[i];
+            shamanText.text = shamanTextXML.Attributes["text"].Value.ToString();
         }
     }
    
     private void FadeOutShamanAndText() {
         GameManager.instance.isPaused = false;
         gameObject.SetActive(false);
+        shamanDialogueBox.SetActive(false);
         shamanText.gameObject.SetActive(false);
     }
 	

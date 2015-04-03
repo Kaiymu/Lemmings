@@ -9,6 +9,10 @@ public class LemmingSpawner : MonoBehaviour {
     private GameObject[] lemmingsPrefabs = new GameObject[7];
     private XmlNodeList lemmings;
 
+    private Color _blue = Color.blue;
+    private Color _red = Color.red;
+    private Color _green = Color.green;
+
     private int i = 0;
     private float spawnDeltaTime = 0f;
 
@@ -65,12 +69,27 @@ public class LemmingSpawner : MonoBehaviour {
     					GameObject newLemming = Instantiate(RetrieveLemmingsFromType(type), transform.position, transform.rotation) as GameObject;
     					newLemming.transform.parent = GameObject.FindGameObjectWithTag("Lemmings").transform;
     					newLemming.GetComponent<Lemmings>().lemmingColor = color;
+                        newLemming.GetComponent<SpriteRenderer>().color = ColorParser(color);
                         _gameManager.allLemmings.Add(newLemming);
                         _gameManager.SetNumberOfLemmings(1);
     				}             
                 }
             }
         }
+    }
+
+    private Color ColorParser(string color) {
+        switch(color)
+        {
+            case "BLUE" :
+                return Color.blue;
+            case "RED" : 
+                return Color.red;
+            case "YELLOW" :
+                return Color.yellow;
+        }
+        return Color.white;
+
     }
     
     private GameObject RetrieveLemmingsFromType(string type)

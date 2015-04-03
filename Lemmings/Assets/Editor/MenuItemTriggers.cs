@@ -127,10 +127,17 @@ public class MenuItemTriggers : MonoBehaviour
         InstantiateObject(o);
     }
     
-    [MenuItem("Custom Objects/TRIGGERS/Interuptor/PlatformMoving")]
-    private static void CreatePlatformMoving()
+    [MenuItem("Custom Objects/TRIGGERS/Platforms/PlatformMoving Horizontal")]
+    private static void CreatePlatformMovingHorizontal()
     {
-        Object o = Resources.Load("Prefabs/Platforms/PlatformMoving");
+        Object o = Resources.Load("Prefabs/Platforms/PlatformMoving_H");
+        InstantiateObject(o);
+    }
+
+    [MenuItem("Custom Objects/TRIGGERS/Platforms/PlatformMoving Vertical")]
+    private static void CreatePlatformMovingVertical()
+    {
+        Object o = Resources.Load("Prefabs/Platforms/PlatformMoving_V");
         InstantiateObject(o);
     }
     
@@ -145,6 +152,13 @@ public class MenuItemTriggers : MonoBehaviour
     private static void CreateWaterTrigger()
     {
         Object o = Resources.Load("Prefabs/Triggers/WaterArea/WaterCollision");
+        InstantiateObject(o);
+    }
+
+    [MenuItem("Custom Objects/Shaman")]
+    private static void CreateShaman()
+    {
+        Object o = Resources.Load("Prefabs/Shaman/Shaman");
         InstantiateObject(o);
     }
   

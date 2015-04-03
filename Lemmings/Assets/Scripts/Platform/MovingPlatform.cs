@@ -3,8 +3,7 @@ using System.Collections;
 
 public class MovingPlatform : MonoBehaviour {
 
-    [HideInInspector]
-    public bool canMove = true;
+    public bool canMove = false;
 
     [Header("Tu met ici le plateform to reach mis sur ta scène")]
     public GameObject pointToReach;
