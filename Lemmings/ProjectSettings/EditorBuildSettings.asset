@@ -8,4 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level_1/Samya/menu.unity
   - enabled: 1
-    path: Assets/Scenes/level_1/Thomas/level_1.unity
+    path: Assets/Scenes/FinalScene/level_01/level_01_final.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/level_02/level_02_final_scene.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/level_03/level_03_final_scene.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/level_04/level_04_final_scene.unity
+  - enabled: 1
+    path: Assets/Scenes/level_1/Samya/credits.unity
