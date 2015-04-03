@@ -20,7 +20,8 @@ public class GUIManager : SingleBehaviour<GUIManager> {
     }
 
     private void Update() {
-        CountTime();
+        if(_gameManager.isPaused == false)
+            CountTime();
     }
 
     public void CountTime() {

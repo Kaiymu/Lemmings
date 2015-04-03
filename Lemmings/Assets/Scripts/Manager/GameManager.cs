@@ -28,7 +28,7 @@ public class GameManager : SingleBehaviour<GameManager> {
     private LemmingsManager _lemmingManager;
 
     [HideInInspector]
-    public enum STATE{GAMEOVER, PAUSE, INGAME, WIN};
+    public enum STATE{GAMEOVER, PAUSE, INGAME, WIN, SHAMAN};
     public STATE state;
 
 	private void Awake() {
@@ -49,6 +49,8 @@ public class GameManager : SingleBehaviour<GameManager> {
             case STATE.INGAME:
                 break;
             case STATE.PAUSE:
+                break;
+            case STATE.SHAMAN:
                 break;
             case STATE.WIN:
                 _GUIManager.SetNumberOfLemmingsSaved(numberOfLemmingsSaved);

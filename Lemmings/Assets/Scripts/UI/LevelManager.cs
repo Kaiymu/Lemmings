@@ -14,4 +14,8 @@ public class LevelManager : MonoBehaviour {
     public void LoadLevel(string levelToLoad) {
         Application.LoadLevel(levelToLoad);
     }
+
+    public void GoToMenu() {
+        Application.LoadLevel(0);
+    }
 }
