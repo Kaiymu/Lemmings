@@ -66,12 +66,13 @@ public class Lemmings : MonoBehaviour {
         m_Lemming = gameObject;
         m_transform = GetComponent<Transform>();
         currentY = m_transform.position;
+
+        fsm = new FSM<Lemmings>();
+        fsm.Configure(this, MovingState.Instance);
     }
 
     private void Start()
     {
-        fsm = new FSM<Lemmings>();
-        fsm.Configure(this, MovingState.Instance);
         if(GameManager.instance.isPaused)
             fsm.Configure(this, PauseState.Instance);
         else 
@@ -85,6 +86,11 @@ public class Lemmings : MonoBehaviour {
     private float ancientY;
 
     private void Update() {
+
+		/*if(GameManager.instance.isPaused == true)
+			fsm.ChangeState(PauseState.Instance);
+		else
+			fsm.ChangeState(MovingState.Instance);*/
 
 		if(activateLove)
 			InLove();
@@ -118,7 +124,7 @@ public class Lemmings : MonoBehaviour {
 	}
 
     public void LemmingsDeath() {
-        LemmingsManager.instance.RemoveLemming(gameObject);
+        LemmingsManager.instance.RemoveLemming(gameObject, "dead");
     }
 
     public void Flip() {
@@ -168,20 +174,17 @@ public class Lemmings : MonoBehaviour {
                 case EnumLemmings.BOUNCE : 
                     i = 4;
                 break;
-                case EnumLemmings.LOVE : 
-                    i = 5;
-                    break;
     		}
 
             GameObject lemmingsTrigger = Instantiate(triggersToSpawn[i], new Vector3(transform.position.x, transform.position.y + 0.1f, 0f), transform.rotation) as GameObject;
-            GameManager.instance.allLemmings.Add(lemmingsTrigger);
-            GameManager.instance.SetNumberOfLemmings(1);
+            //GameManager.instance.allLemmings.Add(lemmingsTrigger);
+            //GameManager.instance.SetNumberOfLemmings(1, "other");
 
             if(containerLemmingsTrigger != null) {
                 lemmingsTrigger.transform.parent = containerLemmingsTrigger.transform;
                 lemmingsTrigger.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, 0f);
             }
-            LemmingsManager.instance.RemoveLemming(gameObject);
+            LemmingsManager.instance.RemoveLemming(gameObject, "dead");
             isClicked = false;
         }
     }

@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5061492}
   - 95: {fileID: 9532836}
   - 58: {fileID: 5894242}
+  - 114: {fileID: 11431684}
   m_Layer: 8
   m_Name: LemmingsStone
   m_TagString: Lemming
@@ -77,6 +78,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11431684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98543c083a8b5d4584a46f4e8d2ce81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11498414
 MonoBehaviour:
   m_ObjectHideFlags: 1

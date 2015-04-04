@@ -79,16 +79,25 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
         GameManager.instance.isPaused = true;
 
         for(int i = 0; i < _gameManager.allLemmings.Count; i++) {
-            _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+            Debug.Log(_gameManager.allLemmings[i]);
+            if(_gameManager.allLemmings[i] != null) {
+                if(_gameManager.allLemmings[i].GetComponent<Lemmings>().fsm != null) {
+                    _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
+                }
+            }
         }
     }
 
 
     public void PlayLemmings() {
+
         GameManager.instance.isPaused = false;
-        for(int i = 0; i < _gameManager.allLemmings.Count; i++) {        
-            if(_gameManager.allLemmings[i].GetComponent<Lemmings>().fsm != null) {
-                _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(MovingState.Instance);
+        for(int i = 0; i < _gameManager.allLemmings.Count; i++) {    
+            if(_gameManager.allLemmings[i] != null) {
+                Debug.Log(_gameManager.allLemmings[i].GetComponent<Lemmings>().fsm);
+                if(_gameManager.allLemmings[i].GetComponent<Lemmings>().fsm != null) {
+                    _gameManager.allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(MovingState.Instance);
+                }
             }
         }
     }
@@ -105,10 +114,10 @@ public class LemmingsManager : SingleBehaviour<LemmingsManager> {
 		}
     }
 
-    public void RemoveLemming(GameObject lemmingToDelete) {
+    public void RemoveLemming(GameObject lemmingToDelete, string isDeadOrSaved) {
         if(_gameManager.allLemmings.Contains(lemmingToDelete)) {
             _gameManager.allLemmings.Remove(lemmingToDelete);
-            _gameManager.SetNumberOfLemmings(-1);
+            _gameManager.SetNumberOfLemmings(-1, isDeadOrSaved);
             Destroy(lemmingToDelete);
         }
     }

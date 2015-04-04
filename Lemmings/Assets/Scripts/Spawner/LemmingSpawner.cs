@@ -71,7 +71,7 @@ public class LemmingSpawner : MonoBehaviour {
     					newLemming.GetComponent<Lemmings>().lemmingColor = color;
                         newLemming.GetComponent<SpriteRenderer>().color = ColorParser(color);
                         _gameManager.allLemmings.Add(newLemming);
-                        _gameManager.SetNumberOfLemmings(1);
+                        _gameManager.SetNumberOfLemmings(1, "saved");
     				}             
                 }
             }
@@ -89,7 +89,11 @@ public class LemmingSpawner : MonoBehaviour {
                 return Color.yellow;
         }
         return Color.white;
+    }
 
+    public Vector3 hexColor(float r, float g, float b){
+        Vector3 color = new Vector3(r/255, g/255, b/255);
+        return color;
     }
     
     private GameObject RetrieveLemmingsFromType(string type)

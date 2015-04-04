@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LemmingsLDSetup>
+  	<Lemming type="lemmingNeutral" spawnDeltaTime="1" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="2" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="4" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="5" color="BLUE"/>
+  	<Lemming type="lemmingNeutral" spawnDeltaTime="7" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="8" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="10" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="11" color="BLUE"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="13" color="YELLOW"/>
+	<Lemming type="lemmingNeutral" spawnDeltaTime="14" color="YELLOW"/>
+</LemmingsLDSetup> 
