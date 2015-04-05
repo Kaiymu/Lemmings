@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789c5a8e21abfce459ffd852b779f155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
+  canMove: 0
   pointToReach: {fileID: 0}
   speed: 5
 --- !u!212 &21268908
