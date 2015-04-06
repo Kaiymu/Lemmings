@@ -21,6 +21,11 @@ public class GameManager : SingleBehaviour<GameManager> {
     [HideInInspector]
     public int numberOfLemmingsSaved;
 
+    public int deadLemmingsToGameOver = 4;
+    public int savedLemmingsToWin = 5;
+    public int lemmingsSaved = 0;
+    public int lemmingsDead = 0;
+
     public Transform endLevel;
     public Transform gameOver;
 
@@ -88,7 +93,7 @@ public class GameManager : SingleBehaviour<GameManager> {
 		numberOfLemmings += number;
 		_GUIManager.SetNumberOfLemmings(numberOfLemmings);
 
-		if(isDeadOrSaved == "dead") {
+		/*if(isDeadOrSaved == "dead") {
 			deadLemmings++;
 			if(deadLemmings >= numberMaxOfLemmingsToLoose) {
 				state = STATE.GAMEOVER;
@@ -100,7 +105,7 @@ public class GameManager : SingleBehaviour<GameManager> {
                         allLemmings[i].GetComponent<Lemmings>().fsm.ChangeState(PauseState.Instance);
 				}
 			}
-		}
+		}*/
 	}
 
     public void SetNumberMaxOfLemmings(int number) {
